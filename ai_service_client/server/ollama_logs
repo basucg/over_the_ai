@@ -1,0 +1,952 @@
+swu_slm_ollama  | Couldn't find '/root/.ollama/id_ed25519'. Generating new private key.
+swu_slm_ollama  | Your new public key is: 
+swu_slm_ollama  | 
+swu_slm_ollama  | ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHx+NN+J8ar3RL90KlpST3RB89sY8lr0ZTHX3KJaKfS+
+swu_slm_ollama  | 
+swu_slm_ollama  | time=2026-09-06T06:40:55.131Z level=INFO source=routes.go:1951 msg="server config" env="map[CUDA_VISIBLE_DEVICES: GGML_VK_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY:http://host.docker.internal:3129 HTTP_PROXY:http://host.docker.internal:3129 LLAMA_ARG_FIT: LLAMA_ARG_FIT_TARGET: NO_PROXY:localhost,127.0.0.1,ollama,swu_slm_ollama OLLAMA_CONTEXT_LENGTH:0 OLLAMA_DEBUG:INFO OLLAMA_DEBUG_LOG_REQUESTS:false OLLAMA_EDITOR: OLLAMA_FLASH_ATTENTION:false OLLAMA_GO_TEMPLATE:true OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://0.0.0.0:11434 OLLAMA_IGPU_ENABLE: OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_TRANSFER_STREAMS:4 OLLAMA_MODELS:/root/.ollama/models OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NO_CLOUD:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_REMOTES:[ollama.com] OLLAMA_SCHED_SPREAD:false OLLAMA_VULKAN:true ROCR_VISIBLE_DEVICES: http_proxy:http://host.docker.internal:3129 https_proxy:http://host.docker.internal:3129 no_proxy:localhost,127.0.0.1,ollama,swu_slm_ollama]"
+swu_slm_ollama  | time=2026-09-06T06:40:55.131Z level=INFO source=routes.go:1953 msg="Ollama cloud disabled: false"
+swu_slm_ollama  | time=2026-09-06T06:40:55.131Z level=INFO source=images.go:919 msg="total blobs: 0"
+swu_slm_ollama  | time=2026-09-06T06:40:55.131Z level=INFO source=images.go:926 msg="total unused blobs removed: 0"
+swu_slm_ollama  | time=2026-09-06T06:40:55.132Z level=INFO source=routes.go:2008 msg="Listening on [::]:11434 (version 0.33.2)"
+swu_slm_ollama  | time=2026-09-06T06:40:55.132Z level=INFO source=model_list_cache.go:112 msg="model list cache hydration complete" models=0 failures=0 elapsed=273.312µs
+swu_slm_ollama  | time=2026-09-06T06:40:55.134Z level=INFO source=runner.go:60 msg="discovering available GPUs..."
+swu_slm_ollama  | time=2026-09-06T06:40:55.452Z level=INFO source=types.go:50 msg="inference compute" id=cpu library=cpu compute="" name=cpu description=cpu libdirs=ollama driver="" pci_id="" type="" total="7.8 GiB" available="7.4 GiB"
+swu_slm_ollama  | time=2026-09-06T06:40:55.452Z level=INFO source=routes.go:2058 msg="vram-based default context" total_vram="0 B" default_num_ctx=4096
+swu_slm_ollama  | time=2026-09-06T06:40:56.020Z level=INFO source=model_recommendations.go:177 msg="model recommendations cache sleep scheduled" wait=4h23m25.168154243s consecutive_failures=0
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:00 | 200 |      37.297µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:00 | 200 |      63.039µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:00 | 200 |      20.046µs |      172.18.0.3 | HEAD     "/"
+swu_slm_ollama  | time=2026-09-06T06:41:04.042Z level=INFO source=download.go:181 msg="downloading 3e4cb1417446 in 16 156 MB part(s)"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:10 | 200 |      56.382µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:10 | 200 |      67.394µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:20 | 200 |      23.874µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:20 | 200 |       71.49µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:30 | 200 |      22.036µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:30 | 200 |     138.288µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:40 | 200 |      20.825µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:40 | 200 |      69.992µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:50 | 200 |      20.671µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:41:50 | 200 |      98.267µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:00 | 200 |      22.057µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:00 | 200 |      75.341µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:10 | 200 |      20.735µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:10 | 200 |      78.732µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:20 | 200 |      20.814µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:20 | 200 |      61.887µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:30 | 200 |      22.231µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:30 | 200 |      75.627µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:40 | 200 |      21.054µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:40 | 200 |      64.199µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:50 | 200 |      24.933µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:42:50 | 200 |      79.015µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:00 | 200 |      22.441µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:00 | 200 |      53.155µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:10 | 200 |      24.517µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:10 | 200 |     127.729µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:20 | 200 |      23.176µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:20 | 200 |      105.43µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:30 | 200 |      28.595µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:30 | 200 |      86.141µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:40 | 200 |      21.942µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:40 | 200 |      64.368µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:50 | 200 |      19.742µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:43:50 | 200 |      69.559µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:00 | 200 |      21.331µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:00 | 200 |      77.521µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:10 | 200 |      20.596µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:10 | 200 |      63.482µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | time=2026-09-06T06:44:20.352Z level=INFO source=download.go:181 msg="downloading 2d54db2b9bb2 in 1 1.5 KB part(s)"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:20 | 200 |      21.143µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:20 | 200 |      56.824µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | time=2026-09-06T06:44:22.057Z level=INFO source=download.go:181 msg="downloading d18a5cc71b84 in 1 11 KB part(s)"
+swu_slm_ollama  | time=2026-09-06T06:44:23.666Z level=INFO source=download.go:181 msg="downloading cff3f395ef37 in 1 120 B part(s)"
+swu_slm_ollama  | time=2026-09-06T06:44:25.371Z level=INFO source=download.go:181 msg="downloading e18a783aae55 in 1 487 B part(s)"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:27 | 200 |         3m26s |      172.18.0.3 | POST     "/api/pull"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:30 | 200 |       24.09µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:30 | 200 |     147.344µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:41 | 200 |      21.714µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:41 | 200 |     129.106µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:51 | 200 |      19.492µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:44:51 | 200 |     120.695µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:01 | 200 |      24.351µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:01 | 200 |      133.53µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:11 | 200 |      18.887µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:11 | 200 |      138.35µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:21 | 200 |      21.078µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:21 | 200 |     132.173µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | time=2026-09-06T06:45:29.467Z level=INFO source=sched.go:1147 msg="disabling mmap for llama-server load by default" model=/root/.ollama/models/blobs/sha256-3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f reason=cpu
+swu_slm_ollama  | time=2026-09-06T06:45:29.467Z level=INFO source=server.go:109 msg="using llama-server for model" model=/root/.ollama/models/blobs/sha256-3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f
+swu_slm_ollama  | time=2026-09-06T06:45:29.468Z level=INFO source=llama_server.go:433 msg="starting llama-server" cmd="/usr/lib/ollama/llama-server --model /root/.ollama/models/blobs/sha256-3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f --port 37729 --host 127.0.0.1 --no-webui --offline -c 4096 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --load-mode none --flash-attn auto -b 512 -ub 512 --context-shift --keep 4"
+swu_slm_ollama  | time=2026-09-06T06:45:29.468Z level=INFO source=sched.go:613 msg="system memory" total="7.8 GiB" free="5.0 GiB" free_swap="15.9 GiB"
+swu_slm_ollama  | time=2026-09-06T06:45:29.468Z level=INFO source=llama_server.go:1048 msg="loading model via llama-server" model=/root/.ollama/models/blobs/sha256-3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f
+swu_slm_ollama  | time=2026-09-06T06:45:29.468Z level=INFO source=llama_server.go:1295 msg="waiting for llama-server to start responding"
+swu_slm_ollama  | time=2026-09-06T06:45:29.468Z level=INFO source=llama_server.go:1350 msg="waiting for llama-server to become available" status="llm server not responding"
+swu_slm_ollama  | cmn  common_param: common_params_print_info: build 1 (d222767c7) with GNU 13.3.1 for Linux x86_64
+swu_slm_ollama  | cmn  common_param: common_params_print_info: verbosity = 4 (adjust with the `-lv N` CLI arg)
+swu_slm_ollama  | cmn  common_param: device_info:
+swu_slm_ollama  | cmn  common_param:   - CPU     : 13th Gen Intel(R) Core(TM) i7-13850HX (7936 MiB, 7936 MiB free)
+swu_slm_ollama  | cmn  common_param: system_info: n_threads = 14 (n_threads_batch = 14) / 28 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | REPACK = 1 | 
+swu_slm_ollama  | srv          init: using 27 threads for HTTP server
+swu_slm_ollama  | srv          init: The UI is disabled
+swu_slm_ollama  | srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+swu_slm_ollama  | srv  llama_server: -----------------
+swu_slm_ollama  | srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+swu_slm_ollama  | srv  llama_server: this can be a security risk (cross-origin attacks)
+swu_slm_ollama  | srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+swu_slm_ollama  | srv  llama_server: -----------------
+swu_slm_ollama  | srv         start: binding port with default address family
+swu_slm_ollama  | srv    load_model: loading model '/root/.ollama/models/blobs/sha256-3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f'
+swu_slm_ollama  | srv    load_model: local path '/root/.ollama/models/blobs/sha256-3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f'
+swu_slm_ollama  | cmn  common_init_: fitting params to device memory ...
+swu_slm_ollama  | cmn  common_init_: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)
+swu_slm_ollama  | common_params_fit_impl: getting device memory data for initial parameters:
+swu_slm_ollama  | common_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+swu_slm_ollama  | common_memory_breakdown_print: |   - Host               |                 1352 =   692 +     576 +      84                |
+swu_slm_ollama  | common_memory_breakdown_print: |   - CPU_REPACK         |                 1683 =  1683 +       0 +       0                |
+swu_slm_ollama  | common_params_fit_impl: projected to use 1352 MiB of host memory vs. 7936 MiB of total host memory
+swu_slm_ollama  | common_params_fit_impl: will leave 6584 >= 1024 MiB of system memory, no changes needed
+swu_slm_ollama  | common_fit_params: successfully fit params to free device memory
+swu_slm_ollama  | common_fit_params: fitting params to free memory took 0.20 seconds
+swu_slm_ollama  | llama_model_loader: loaded meta data with 33 key-value pairs and 398 tensors from /root/.ollama/models/blobs/sha256-3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f (version GGUF V3 (latest))
+swu_slm_ollama  | llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+swu_slm_ollama  | llama_model_loader: - kv   0:                       general.architecture str              = qwen3
+swu_slm_ollama  | llama_model_loader: - kv   1:                           general.basename str              = Qwen3
+swu_slm_ollama  | llama_model_loader: - kv   2:                          general.file_type u32              = 15
+swu_slm_ollama  | llama_model_loader: - kv   3:                           general.finetune str              = Thinking
+swu_slm_ollama  | llama_model_loader: - kv   4:                            general.license str              = apache-2.0
+swu_slm_ollama  | llama_model_loader: - kv   5:                       general.license.link str              = https://huggingface.co/Qwen/Qwen3-4B-...
+swu_slm_ollama  | llama_model_loader: - kv   6:                               general.name str              = Qwen3 4B Thinking 2507
+swu_slm_ollama  | llama_model_loader: - kv   7:                    general.parameter_count u64              = 4022468096
+swu_slm_ollama  | llama_model_loader: - kv   8:               general.quantization_version u32              = 2
+swu_slm_ollama  | llama_model_loader: - kv   9:                         general.size_label str              = 4B
+swu_slm_ollama  | llama_model_loader: - kv  10:                               general.tags arr[str,1]       = ["text-generation"]
+swu_slm_ollama  | llama_model_loader: - kv  11:                               general.type str              = model
+swu_slm_ollama  | llama_model_loader: - kv  12:                            general.version str              = 2507
+swu_slm_ollama  | llama_model_loader: - kv  13:                 qwen3.attention.head_count u32              = 32
+swu_slm_ollama  | llama_model_loader: - kv  14:              qwen3.attention.head_count_kv u32              = 8
+swu_slm_ollama  | llama_model_loader: - kv  15:                 qwen3.attention.key_length u32              = 128
+swu_slm_ollama  | llama_model_loader: - kv  16:     qwen3.attention.layer_norm_rms_epsilon f32              = 0.000001
+swu_slm_ollama  | llama_model_loader: - kv  17:               qwen3.attention.value_length u32              = 128
+swu_slm_ollama  | llama_model_loader: - kv  18:                          qwen3.block_count u32              = 36
+swu_slm_ollama  | llama_model_loader: - kv  19:                       qwen3.context_length u32              = 262144
+swu_slm_ollama  | llama_model_loader: - kv  20:                     qwen3.embedding_length u32              = 2560
+swu_slm_ollama  | llama_model_loader: - kv  21:                  qwen3.feed_forward_length u32              = 9728
+swu_slm_ollama  | llama_model_loader: - kv  22:                       qwen3.rope.freq_base f32              = 5000000.000000
+swu_slm_ollama  | llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {%- if tools %}\n    {{- '<|im_start|>...
+swu_slm_ollama  | llama_model_loader: - kv  24:               tokenizer.ggml.add_bos_token bool             = false
+swu_slm_ollama  | llama_model_loader: - kv  25:                tokenizer.ggml.bos_token_id u32              = 151643
+swu_slm_ollama  | llama_model_loader: - kv  26:                tokenizer.ggml.eos_token_id u32              = 151645
+swu_slm_ollama  | llama_model_loader: - kv  27:                      tokenizer.ggml.merges arr[str,151387]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+swu_slm_ollama  | llama_model_loader: - kv  28:                       tokenizer.ggml.model str              = gpt2
+swu_slm_ollama  | llama_model_loader: - kv  29:            tokenizer.ggml.padding_token_id u32              = 151643
+swu_slm_ollama  | llama_model_loader: - kv  30:                         tokenizer.ggml.pre str              = qwen2
+swu_slm_ollama  | llama_model_loader: - kv  31:                  tokenizer.ggml.token_type arr[i32,151936]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+swu_slm_ollama  | time=2026-09-06T06:45:29.720Z level=INFO source=llama_server.go:1350 msg="waiting for llama-server to become available" status="llm server loading model"
+swu_slm_ollama  | llama_model_loader: - kv  32:                      tokenizer.ggml.tokens arr[str,151936]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+swu_slm_ollama  | llama_model_loader: - type  f32:  145 tensors
+swu_slm_ollama  | llama_model_loader: - type q4_K:  216 tensors
+swu_slm_ollama  | llama_model_loader: - type q6_K:   37 tensors
+swu_slm_ollama  | print_info: file format = GGUF V3 (latest)
+swu_slm_ollama  | print_info: file type   = Q4_K - Medium
+swu_slm_ollama  | print_info: file size   = 2.32 GiB (4.95 BPW) 
+swu_slm_ollama  | load: 0 unused tokens
+swu_slm_ollama  | load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+swu_slm_ollama  | load: printing all EOG tokens:
+swu_slm_ollama  | load:   - 128247 ('</s>')
+swu_slm_ollama  | load:   - 151643 ('<|endoftext|>')
+swu_slm_ollama  | load:   - 151645 ('<|im_end|>')
+swu_slm_ollama  | load:   - 151662 ('<|fim_pad|>')
+swu_slm_ollama  | load:   - 151663 ('<|repo_name|>')
+swu_slm_ollama  | load:   - 151664 ('<|file_sep|>')
+swu_slm_ollama  | load: special tokens cache size = 27
+swu_slm_ollama  | load: token to piece cache size = 0.9311 MB
+swu_slm_ollama  | print_info: arch                  = qwen3
+swu_slm_ollama  | print_info: vocab_only            = 0
+swu_slm_ollama  | print_info: no_alloc              = 0
+swu_slm_ollama  | print_info: n_ctx_train           = 262144
+swu_slm_ollama  | print_info: n_embd_inp            = 2560
+swu_slm_ollama  | print_info: n_embd                = 2560
+swu_slm_ollama  | print_info: n_embd_out            = 2560
+swu_slm_ollama  | print_info: n_layer               = 36
+swu_slm_ollama  | print_info: n_layer_all           = 36
+swu_slm_ollama  | print_info: n_head                = 32
+swu_slm_ollama  | print_info: n_head_kv             = 8
+swu_slm_ollama  | print_info: n_rot                 = 128
+swu_slm_ollama  | print_info: n_swa                 = 0
+swu_slm_ollama  | print_info: is_swa_any            = 0
+swu_slm_ollama  | print_info: n_embd_head_k         = 128
+swu_slm_ollama  | print_info: n_embd_head_v         = 128
+swu_slm_ollama  | print_info: n_gqa                 = 4
+swu_slm_ollama  | print_info: n_embd_k_gqa          = 1024
+swu_slm_ollama  | print_info: n_embd_v_gqa          = 1024
+swu_slm_ollama  | print_info: f_norm_eps            = 0.0e+00
+swu_slm_ollama  | print_info: f_norm_rms_eps        = 1.0e-06
+swu_slm_ollama  | print_info: f_clamp_kqv           = 0.0e+00
+swu_slm_ollama  | print_info: f_max_alibi_bias      = 0.0e+00
+swu_slm_ollama  | print_info: f_logit_scale         = 0.0e+00
+swu_slm_ollama  | print_info: f_attn_scale          = 0.0e+00
+swu_slm_ollama  | print_info: f_attn_value_scale    = 0.0000
+swu_slm_ollama  | print_info: n_ff                  = 9728
+swu_slm_ollama  | print_info: n_expert              = 0
+swu_slm_ollama  | print_info: n_expert_used         = 0
+swu_slm_ollama  | print_info: n_expert_groups       = 0
+swu_slm_ollama  | print_info: n_group_used          = 0
+swu_slm_ollama  | print_info: causal attn           = 1
+swu_slm_ollama  | print_info: pooling type          = -1
+swu_slm_ollama  | print_info: rope type             = 2
+swu_slm_ollama  | print_info: rope scaling          = linear
+swu_slm_ollama  | print_info: freq_base_train       = 5000000.0
+swu_slm_ollama  | print_info: freq_scale_train      = 1
+swu_slm_ollama  | print_info: n_ctx_orig_yarn       = 262144
+swu_slm_ollama  | print_info: rope_yarn_log_mul     = 0.0000
+swu_slm_ollama  | print_info: rope_finetuned        = unknown
+swu_slm_ollama  | print_info: model type            = 4B
+swu_slm_ollama  | print_info: model params          = 4.02 B
+swu_slm_ollama  | print_info: general.name          = Qwen3 4B Thinking 2507
+swu_slm_ollama  | print_info: vocab type            = BPE
+swu_slm_ollama  | print_info: n_vocab               = 151936
+swu_slm_ollama  | print_info: n_merges              = 151387
+swu_slm_ollama  | print_info: BOS token             = 151643 '<|endoftext|>'
+swu_slm_ollama  | print_info: EOS token             = 151645 '<|im_end|>'
+swu_slm_ollama  | print_info: EOT token             = 151645 '<|im_end|>'
+swu_slm_ollama  | print_info: PAD token             = 151643 '<|endoftext|>'
+swu_slm_ollama  | print_info: LF token              = 198 'Ċ'
+swu_slm_ollama  | print_info: FIM PRE token         = 151659 '<|fim_prefix|>'
+swu_slm_ollama  | print_info: FIM SUF token         = 151661 '<|fim_suffix|>'
+swu_slm_ollama  | print_info: FIM MID token         = 151660 '<|fim_middle|>'
+swu_slm_ollama  | print_info: FIM PAD token         = 151662 '<|fim_pad|>'
+swu_slm_ollama  | print_info: FIM REP token         = 151663 '<|repo_name|>'
+swu_slm_ollama  | print_info: FIM SEP token         = 151664 '<|file_sep|>'
+swu_slm_ollama  | print_info: EOG token             = 128247 '</s>'
+swu_slm_ollama  | print_info: EOG token             = 151643 '<|endoftext|>'
+swu_slm_ollama  | print_info: EOG token             = 151645 '<|im_end|>'
+swu_slm_ollama  | print_info: EOG token             = 151662 '<|fim_pad|>'
+swu_slm_ollama  | print_info: EOG token             = 151663 '<|repo_name|>'
+swu_slm_ollama  | print_info: EOG token             = 151664 '<|file_sep|>'
+swu_slm_ollama  | print_info: max token length      = 256
+swu_slm_ollama  | load_tensors: loading model tensors, this can take a while... (load_mode = none)
+swu_slm_ollama  | load_tensors:          CPU model buffer size =   692.63 MiB
+swu_slm_ollama  | load_tensors:   CPU_REPACK model buffer size =  1683.28 MiB
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:31 | 200 |      22.766µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:31 | 200 |     140.212µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | cmn  common_init_: added </s> logit bias = -inf
+swu_slm_ollama  | cmn  common_init_: added <|endoftext|> logit bias = -inf
+swu_slm_ollama  | cmn  common_init_: added <|im_end|> logit bias = -inf
+swu_slm_ollama  | cmn  common_init_: added <|fim_pad|> logit bias = -inf
+swu_slm_ollama  | cmn  common_init_: added <|repo_name|> logit bias = -inf
+swu_slm_ollama  | cmn  common_init_: added <|file_sep|> logit bias = -inf
+swu_slm_ollama  | llama_context: constructing llama_context
+swu_slm_ollama  | llama_context: n_seq_max             = 1
+swu_slm_ollama  | llama_context: n_ctx                 = 4096
+swu_slm_ollama  | llama_context: n_ctx_seq             = 4096
+swu_slm_ollama  | llama_context: n_batch               = 512
+swu_slm_ollama  | llama_context: n_ubatch              = 512
+swu_slm_ollama  | llama_context: causal_attn           = 1
+swu_slm_ollama  | llama_context: flash_attn            = auto
+swu_slm_ollama  | llama_context: kv_unified            = false
+swu_slm_ollama  | llama_context: freq_base             = 5000000.0
+swu_slm_ollama  | llama_context: freq_scale            = 1
+swu_slm_ollama  | llama_context: n_rs_seq              = 0
+swu_slm_ollama  | llama_context: n_outputs_max         = 1
+swu_slm_ollama  | llama_context: n_outputs_max_per_seq = 1
+swu_slm_ollama  | llama_context: n_ctx_seq (4096) < n_ctx_train (262144) -- the full capacity of the model will not be utilized
+swu_slm_ollama  | llama_context:        CPU  output buffer size =     0.58 MiB
+swu_slm_ollama  | llama_kv_cache:        CPU KV buffer size =   576.00 MiB
+swu_slm_ollama  | llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB
+swu_slm_ollama  | llama_kv_cache: attn_rot_k = 0, n_embd_head_k_all = 128
+swu_slm_ollama  | llama_kv_cache: attn_rot_v = 0, n_embd_head_k_all = 128
+swu_slm_ollama  | sched_reserve: reserving ...
+swu_slm_ollama  | resolve_fused_ops: Flash Attention enabled
+swu_slm_ollama  | resolve_fused_ops: resolving fused Gated Delta Net support:
+swu_slm_ollama  | resolve_fused_ops: fused Gated Delta Net (autoregressive) enabled
+swu_slm_ollama  | resolve_fused_ops: fused Gated Delta Net (chunked) enabled
+swu_slm_ollama  | resolve_fused_ops: resolving fused Lightning Indexer support:
+swu_slm_ollama  | resolve_fused_ops: Lightning Indexer enabled
+swu_slm_ollama  | resolve_fused_ops: resolving fused DeepSeek V4 HC support:
+swu_slm_ollama  | resolve_fused_ops: fused DeepSeek V4 HC pre enabled
+swu_slm_ollama  | resolve_fused_ops: fused DeepSeek V4 HC comb enabled
+swu_slm_ollama  | resolve_fused_ops: fused DeepSeek V4 HC post enabled
+swu_slm_ollama  | sched_reserve:        CPU compute buffer size =    84.01 MiB
+swu_slm_ollama  | sched_reserve: graph nodes  = 1266
+swu_slm_ollama  | sched_reserve: graph splits = 1
+swu_slm_ollama  | sched_reserve: reserve took 2.91 ms, sched copies = 1
+swu_slm_ollama  | cmn          init: llama threadpool init, n_threads = 14
+swu_slm_ollama  | cmn  common_init_: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+swu_slm_ollama  | srv    load_model: initializing, n_slots = 1, n_ctx_slot = 4096, kv_unified = 'false'
+swu_slm_ollama  | spec common_specu: no implementations specified for speculative decoding
+swu_slm_ollama  | slot   load_model: id  0 | task -1 | new slot, n_ctx = 4096
+swu_slm_ollama  | srv    load_model: prompt cache is enabled, size limit: 8192 MiB
+swu_slm_ollama  | srv    load_model: use `--cache-ram 0` to disable the prompt cache
+swu_slm_ollama  | srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391
+swu_slm_ollama  | srv    load_model: context checkpoints enabled, max = 32, min spacing = 8192
+swu_slm_ollama  | srv          init: idle slots will be saved to prompt cache upon starting a new task
+swu_slm_ollama  | srv          init: init: chat template, example_format: '<|im_start|>system
+swu_slm_ollama  | You are a helpful assistant<|im_end|>
+swu_slm_ollama  | <|im_start|>user
+swu_slm_ollama  | Hello<|im_end|>
+swu_slm_ollama  | <|im_start|>assistant
+swu_slm_ollama  | Hi there<|im_end|>
+swu_slm_ollama  | <|im_start|>user
+swu_slm_ollama  | How are you?<|im_end|>
+swu_slm_ollama  | <|im_start|>assistant
+swu_slm_ollama  | '
+swu_slm_ollama  | srv          init: init: chat template, thinking = 0
+swu_slm_ollama  | srv  llama_server: model loaded
+swu_slm_ollama  | srv  llama_server: listening on http://127.0.0.1:37729
+swu_slm_ollama  | srv  update_slots: all slots are idle
+swu_slm_ollama  | time=2026-09-06T06:45:32.234Z level=INFO source=llama_server.go:1362 msg="llama-server started in 2.77 seconds"
+swu_slm_ollama  | time=2026-09-06T06:45:32.258Z level=INFO source=images.go:381 msg="template selection" model=registry.ollama.ai/library/qwen3:4b selected=go_template renderer="" parser="" go_template="[completion tools thinking]" chat_template="[tools thinking completion]" harmony=null renderer_parser=null
+swu_slm_ollama  | time=2026-09-06T06:45:32.258Z level=INFO source=sched.go:728 msg="loaded runners" count=1
+swu_slm_ollama  | time=2026-09-06T06:45:32.258Z level=INFO source=llama_server.go:1295 msg="waiting for llama-server to start responding"
+swu_slm_ollama  | time=2026-09-06T06:45:32.259Z level=INFO source=llama_server.go:1362 msg="llama-server started in 2.79 seconds"
+swu_slm_ollama  | srv  server_strea: conv_id= (empty=1)
+swu_slm_ollama  | slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+swu_slm_ollama  | slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+swu_slm_ollama  | srv  get_availabl: updating prompt cache
+swu_slm_ollama  | srv          load:  - looking for better prompt, base f_keep = -1.000, f_sim = 0.000
+swu_slm_ollama  | srv        update:  - cache state: 0 prompts, 0.000 MiB (limits: 8192.000 MiB, 4096 tokens, 8589934592 est)
+swu_slm_ollama  | srv  get_availabl: prompt cache update took 0.01 ms
+swu_slm_ollama  | slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+swu_slm_ollama  | slot launch_slot_: id  0 | task -1 | sampler params: 
+swu_slm_ollama  | 	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+swu_slm_ollama  | 	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+swu_slm_ollama  | 	top_k = 20, top_p = 0.950, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.200
+swu_slm_ollama  | 	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+swu_slm_ollama  | slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+swu_slm_ollama  | slot   operator(): id  0 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 1281
+swu_slm_ollama  | slot   operator(): id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | prompt processing, n_tokens =    512, progress = 0.40, t =   4.80 s / 106.59 tokens per second
+swu_slm_ollama  | slot   operator(): id  0 | task 0 | cached n_tokens = 512, memory_seq_rm [512, end)
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:41 | 200 |      32.471µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:41 | 200 |     333.059µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   1024, progress = 0.80, t =  10.03 s / 102.07 tokens per second
+swu_slm_ollama  | slot   operator(): id  0 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+swu_slm_ollama  | slot init_sampler: id  0 | task 0 | init sampler, took 0.21 ms, tokens: text = 1281, total = 1281
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:51 | 200 |      52.656µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:45:51 | 200 |     228.157µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    100, tg =  14.66 t/s, tg_3s =  14.81 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    143, tg =  14.54 t/s, tg_3s =  14.27 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    186, tg =  14.49 t/s, tg_3s =  14.33 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    228, tg =  14.38 t/s, tg_3s =  13.92 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:01 | 200 |      40.857µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:01 | 200 |     227.152µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    269, tg =  14.26 t/s, tg_3s =  13.59 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    309, tg =  14.12 t/s, tg_3s =  13.25 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    350, tg =  14.04 t/s, tg_3s =  13.50 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:11 | 200 |      39.443µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:11 | 200 |     294.724µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    390, tg =  13.96 t/s, tg_3s =  13.30 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    430, tg =  13.89 t/s, tg_3s =  13.21 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    469, tg =  13.80 t/s, tg_3s =  12.89 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:21 | 200 |       46.35µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:21 | 200 |     322.036µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    509, tg =  13.76 t/s, tg_3s =  13.28 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    548, tg =  13.70 t/s, tg_3s =  12.96 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    587, tg =  13.64 t/s, tg_3s =  12.89 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    626, tg =  13.59 t/s, tg_3s =  12.88 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:31 | 200 |      52.224µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:31 | 200 |     300.247µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    665, tg =  13.54 t/s, tg_3s =  12.81 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    703, tg =  13.49 t/s, tg_3s =  12.64 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    741, tg =  13.43 t/s, tg_3s =  12.36 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:41 | 200 |      34.315µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:41 | 200 |     326.178µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    779, tg =  13.37 t/s, tg_3s =  12.43 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    817, tg =  13.32 t/s, tg_3s =  12.37 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    855, tg =  13.28 t/s, tg_3s =  12.39 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:51 | 200 |      38.774µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:46:51 | 200 |     315.499µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    893, tg =  13.24 t/s, tg_3s =  12.40 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    931, tg =  13.20 t/s, tg_3s =  12.37 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =    968, tg =  13.16 t/s, tg_3s =  12.32 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1005, tg =  13.13 t/s, tg_3s =  12.24 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:01 | 200 |      27.947µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:01 | 200 |      217.57µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1042, tg =  13.09 t/s, tg_3s =  12.23 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1078, tg =  13.05 t/s, tg_3s =  11.91 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1115, tg =  13.02 t/s, tg_3s =  12.19 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:11 | 200 |      45.744µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:11 | 200 |     193.305µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1152, tg =  12.99 t/s, tg_3s =  12.07 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1188, tg =  12.95 t/s, tg_3s =  11.93 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1225, tg =  12.92 t/s, tg_3s =  12.04 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:22 | 200 |      45.726µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:22 | 200 |      263.15µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1262, tg =  12.90 t/s, tg_3s =  12.14 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1298, tg =  12.87 t/s, tg_3s =  11.84 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1334, tg =  12.84 t/s, tg_3s =  11.88 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1370, tg =  12.81 t/s, tg_3s =  11.79 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:32 | 200 |      37.804µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:32 | 200 |     283.241µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1405, tg =  12.78 t/s, tg_3s =  11.65 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1440, tg =  12.75 t/s, tg_3s =  11.65 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1476, tg =  12.72 t/s, tg_3s =  11.88 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:42 | 200 |      36.892µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:42 | 200 |     414.885µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1511, tg =  12.70 t/s, tg_3s =  11.64 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1547, tg =  12.67 t/s, tg_3s =  11.76 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1582, tg =  12.65 t/s, tg_3s =  11.57 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:52 | 200 |      28.942µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:47:52 | 200 |     432.527µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1616, tg =  12.61 t/s, tg_3s =  11.23 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1651, tg =  12.59 t/s, tg_3s =  11.46 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1686, tg =  12.56 t/s, tg_3s =  11.48 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1720, tg =  12.53 t/s, tg_3s =  11.26 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:02 | 200 |      37.202µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:02 | 200 |     351.161µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1755, tg =  12.51 t/s, tg_3s =  11.46 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1790, tg =  12.49 t/s, tg_3s =  11.59 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1824, tg =  12.46 t/s, tg_3s =  11.21 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:12 | 200 |      44.303µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:12 | 200 |     230.999µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1858, tg =  12.43 t/s, tg_3s =  11.07 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1892, tg =  12.41 t/s, tg_3s =  11.10 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1925, tg =  12.38 t/s, tg_3s =  10.85 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:22 | 200 |      45.025µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:22 | 200 |     299.104µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1958, tg =  12.34 t/s, tg_3s =  10.69 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   1991, tg =  12.32 t/s, tg_3s =  10.80 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2024, tg =  12.29 t/s, tg_3s =  10.80 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:32 | 200 |      41.631µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:32 | 200 |     293.806µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2057, tg =  12.26 t/s, tg_3s =  10.79 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2089, tg =  12.23 t/s, tg_3s =  10.63 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2121, tg =  12.20 t/s, tg_3s =  10.53 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2154, tg =  12.18 t/s, tg_3s =  10.79 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:42 | 200 |      24.023µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:42 | 200 |     296.556µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2187, tg =  12.15 t/s, tg_3s =  10.80 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2220, tg =  12.13 t/s, tg_3s =  10.79 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2253, tg =  12.11 t/s, tg_3s =  10.75 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:52 | 200 |      41.312µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:48:52 | 200 |     259.654µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2286, tg =  12.09 t/s, tg_3s =  10.79 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2318, tg =  12.06 t/s, tg_3s =  10.65 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2350, tg =  12.04 t/s, tg_3s =  10.66 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:02 | 200 |      33.084µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:02 | 200 |     310.908µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2382, tg =  12.02 t/s, tg_3s =  10.44 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2414, tg =  11.99 t/s, tg_3s =  10.40 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2446, tg =  11.97 t/s, tg_3s =  10.65 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2478, tg =  11.95 t/s, tg_3s =  10.49 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:12 | 200 |      47.595µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:12 | 200 |     360.355µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2510, tg =  11.93 t/s, tg_3s =  10.40 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2542, tg =  11.91 t/s, tg_3s =  10.56 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2573, tg =  11.89 t/s, tg_3s =  10.26 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:23 | 200 |      37.428µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:23 | 200 |     242.699µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2604, tg =  11.86 t/s, tg_3s =  10.21 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2635, tg =  11.84 t/s, tg_3s =  10.09 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2666, tg =  11.82 t/s, tg_3s =  10.09 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:33 | 200 |      35.256µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:33 | 200 |     206.751µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2697, tg =  11.79 t/s, tg_3s =  10.18 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2728, tg =  11.77 t/s, tg_3s =  10.02 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2759, tg =  11.75 t/s, tg_3s =  10.12 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2790, tg =  11.73 t/s, tg_3s =  10.06 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:43 | 200 |        36.3µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:43 | 200 |     349.483µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot   operator(): id  0 | task 0 | slot context shift, n_keep = 4, n_left = 4091, n_discard = 2045
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2820, tg =  11.70 t/s, tg_3s =   9.87 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2852, tg =  11.69 t/s, tg_3s =  10.66 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2884, tg =  11.68 t/s, tg_3s =  10.62 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:53 | 200 |      39.405µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:53 | 200 |     275.589µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | n_gen =   2916, tg =  11.66 t/s, tg_3s =  10.42 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 0 | prompt eval time =   12920.57 ms /  1281 tokens (   10.09 ms per token,    99.14 tokens per second)
+swu_slm_ollama  | slot print_timing: id  0 | task 0 |        eval time =  251126.07 ms /  2928 tokens (   85.80 ms per token,    11.66 tokens per second)
+swu_slm_ollama  | slot print_timing: id  0 | task 0 |       total time =  264046.63 ms /  4209 tokens
+swu_slm_ollama  | slot print_timing: id  0 | task 0 |    graphs reused =       2916
+swu_slm_ollama  | slot      release: id  0 | task 0 | stop processing: n_tokens = 2163, truncated = 1
+swu_slm_ollama  | srv  update_slots: all slots are idle
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:49:56 | 200 |         4m26s |      172.18.0.3 | POST     "/api/generate"
+swu_slm_ollama  | srv  server_strea: conv_id= (empty=1)
+swu_slm_ollama  | slot get_availabl: id  0 | task -1 |  - checking sim = 0.003 (4/1281) > 0.100
+swu_slm_ollama  | slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 75385380678
+swu_slm_ollama  | srv  get_availabl: updating prompt cache
+swu_slm_ollama  | srv   prompt_save:  - saving prompt with length 2163, total state size = 304.197 MiB (draft: 0.000 MiB)
+swu_slm_ollama  | srv          load:  - looking for better prompt, base f_keep = 0.002, f_sim = 0.003
+swu_slm_ollama  | srv          load:    - prompt with length    2163, lcp =       4, f_keep = 0.002, f_sim = 0.003
+swu_slm_ollama  | srv        update:  - cache state: 1 prompts, 304.197 MiB (limits: 8192.000 MiB, 4096 tokens, 58249 est)
+swu_slm_ollama  | srv        update:    - prompt 0x295e3120:    2163 tokens, checkpoints:  0,   304.197 MiB
+swu_slm_ollama  | srv  get_availabl: prompt cache update took 212.29 ms
+swu_slm_ollama  | slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+swu_slm_ollama  | slot launch_slot_: id  0 | task -1 | sampler params: 
+swu_slm_ollama  | 	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+swu_slm_ollama  | 	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+swu_slm_ollama  | 	top_k = 20, top_p = 0.950, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.200
+swu_slm_ollama  | 	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+swu_slm_ollama  | slot launch_slot_: id  0 | task 2931 | processing task, is_child = 0
+swu_slm_ollama  | slot   operator(): id  0 | task 2931 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 1281
+swu_slm_ollama  | slot   operator(): id  0 | task 2931 | cached n_tokens = 4, memory_seq_rm [4, end)
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | prompt processing, n_tokens =    512, progress = 0.40, t =   5.84 s / 87.65 tokens per second
+swu_slm_ollama  | slot   operator(): id  0 | task 2931 | cached n_tokens = 516, memory_seq_rm [516, end)
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:03 | 200 |      40.089µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:03 | 200 |     257.403µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | prompt processing, n_tokens =   1024, progress = 0.80, t =  12.40 s / 82.56 tokens per second
+swu_slm_ollama  | slot   operator(): id  0 | task 2931 | cached n_tokens = 1028, memory_seq_rm [1028, end)
+swu_slm_ollama  | slot init_sampler: id  0 | task 2931 | init sampler, took 0.37 ms, tokens: text = 1281, total = 1281
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:13 | 200 |      60.487µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:13 | 200 |     192.425µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    100, tg =  14.02 t/s, tg_3s =  14.16 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    143, tg =  14.08 t/s, tg_3s =  14.21 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:23 | 200 |      44.742µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:23 | 200 |     212.635µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    186, tg =  14.07 t/s, tg_3s =  14.06 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    228, tg =  14.05 t/s, tg_3s =  13.96 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    271, tg =  14.08 t/s, tg_3s =  14.20 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:33 | 200 |      54.368µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:33 | 200 |     324.864µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    312, tg =  13.99 t/s, tg_3s =  13.44 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    352, tg =  13.88 t/s, tg_3s =  13.12 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    393, tg =  13.85 t/s, tg_3s =  13.57 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:43 | 200 |      40.329µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:43 | 200 |     224.531µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    434, tg =  13.81 t/s, tg_3s =  13.40 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    474, tg =  13.75 t/s, tg_3s =  13.19 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    515, tg =  13.72 t/s, tg_3s =  13.38 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    555, tg =  13.67 t/s, tg_3s =  13.03 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:53 | 200 |      32.867µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:50:53 | 200 |     298.238µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    595, tg =  13.63 t/s, tg_3s =  13.09 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    635, tg =  13.60 t/s, tg_3s =  13.18 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    675, tg =  13.58 t/s, tg_3s =  13.28 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:03 | 200 |      58.265µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:03 | 200 |     346.134µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    715, tg =  13.55 t/s, tg_3s =  13.14 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    755, tg =  13.53 t/s, tg_3s =  13.04 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    794, tg =  13.49 t/s, tg_3s =  12.87 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:13 | 200 |      50.491µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:13 | 200 |     284.868µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    832, tg =  13.45 t/s, tg_3s =  12.62 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    871, tg =  13.41 t/s, tg_3s =  12.72 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    910, tg =  13.38 t/s, tg_3s =  12.71 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    948, tg =  13.35 t/s, tg_3s =  12.62 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:24 | 200 |      42.881µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:24 | 200 |     292.588µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =    987, tg =  13.34 t/s, tg_3s =  12.98 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1025, tg =  13.31 t/s, tg_3s =  12.63 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1063, tg =  13.27 t/s, tg_3s =  12.38 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:34 | 200 |      46.358µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:34 | 200 |     341.964µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1101, tg =  13.24 t/s, tg_3s =  12.51 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1138, tg =  13.20 t/s, tg_3s =  12.08 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1175, tg =  13.17 t/s, tg_3s =  12.29 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:44 | 200 |      39.514µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:44 | 200 |     359.069µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1213, tg =  13.14 t/s, tg_3s =  12.34 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1249, tg =  13.11 t/s, tg_3s =  11.97 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1286, tg =  13.08 t/s, tg_3s =  12.17 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1323, tg =  13.05 t/s, tg_3s =  12.06 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:54 | 200 |      51.028µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:51:54 | 200 |     391.626µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1360, tg =  13.02 t/s, tg_3s =  12.19 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1396, tg =  12.99 t/s, tg_3s =  11.88 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1433, tg =  12.96 t/s, tg_3s =  12.07 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:04 | 200 |      36.513µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:04 | 200 |     253.008µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1469, tg =  12.94 t/s, tg_3s =  11.99 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1505, tg =  12.91 t/s, tg_3s =  11.85 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1541, tg =  12.88 t/s, tg_3s =  11.89 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:14 | 200 |      36.547µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:14 | 200 |      286.63µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1576, tg =  12.85 t/s, tg_3s =  11.67 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1610, tg =  12.81 t/s, tg_3s =  11.13 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1645, tg =  12.78 t/s, tg_3s =  11.50 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1680, tg =  12.75 t/s, tg_3s =  11.45 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:24 | 200 |      46.707µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:24 | 200 |     299.974µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1715, tg =  12.72 t/s, tg_3s =  11.42 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1750, tg =  12.70 t/s, tg_3s =  11.56 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1785, tg =  12.67 t/s, tg_3s =  11.60 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:34 | 200 |      39.038µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:34 | 200 |     258.929µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1819, tg =  12.64 t/s, tg_3s =  11.31 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1853, tg =  12.61 t/s, tg_3s =  11.21 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1887, tg =  12.59 t/s, tg_3s =  11.33 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:44 | 200 |      38.549µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:44 | 200 |     322.145µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1921, tg =  12.56 t/s, tg_3s =  11.15 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1955, tg =  12.53 t/s, tg_3s =  11.05 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   1989, tg =  12.50 t/s, tg_3s =  11.21 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   2023, tg =  12.48 t/s, tg_3s =  11.06 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:54 | 200 |      39.022µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:52:54 | 200 |     184.437µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   2058, tg =  12.46 t/s, tg_3s =  11.37 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   2091, tg =  12.43 t/s, tg_3s =  10.97 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   2125, tg =  12.40 t/s, tg_3s =  11.03 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:04 | 200 |       43.15µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:04 | 200 |     313.699µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   2159, tg =  12.38 t/s, tg_3s =  11.03 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   2193, tg =  12.36 t/s, tg_3s =  11.13 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   2226, tg =  12.33 t/s, tg_3s =  10.88 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:14 | 200 |      35.931µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:14 | 200 |     216.588µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   2260, tg =  12.31 t/s, tg_3s =  11.08 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | n_gen =   2294, tg =  12.29 t/s, tg_3s =  11.03 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 | prompt eval time =   16017.49 ms /  1277 tokens (   12.54 ms per token,    79.73 tokens per second)
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 |        eval time =  188278.03 ms /  2313 tokens (   81.44 ms per token,    12.28 tokens per second)
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 |       total time =  204295.52 ms /  3590 tokens
+swu_slm_ollama  | slot print_timing: id  0 | task 2931 |    graphs reused =       5218
+swu_slm_ollama  | slot      release: id  0 | task 2931 | stop processing: n_tokens = 3593, truncated = 0
+swu_slm_ollama  | srv  update_slots: all slots are idle
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:20 | 200 |         3m24s |      172.18.0.3 | POST     "/api/generate"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:24 | 200 |      20.092µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:24 | 200 |     128.202µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:34 | 200 |       22.92µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:34 | 200 |     132.982µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:45 | 200 |      33.307µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:45 | 200 |       160.5µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:55 | 200 |      22.349µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:53:55 | 200 |     185.307µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:05 | 200 |      18.712µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:05 | 200 |     127.265µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:15 | 200 |      31.754µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:15 | 200 |      126.27µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:25 | 200 |      22.674µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:25 | 200 |     127.204µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:35 | 200 |      24.913µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:35 | 200 |     131.308µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | srv  server_strea: conv_id= (empty=1)
+swu_slm_ollama  | slot get_availabl: id  0 | task -1 |  - checking sim = 1.000 (1281/1281) > 0.100
+swu_slm_ollama  | slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 1.000 (> 0.100 thold), f_keep = 0.357
+swu_slm_ollama  | srv  get_availabl: updating prompt cache
+swu_slm_ollama  | srv   prompt_save:  - saving prompt with length 3593, total state size = 505.308 MiB (draft: 0.000 MiB)
+swu_slm_ollama  | srv          load:  - looking for better prompt, base f_keep = 0.357, f_sim = 1.000
+swu_slm_ollama  | srv          load:    - prompt with length    2163, lcp =       4, f_keep = 0.002, f_sim = 0.003
+swu_slm_ollama  | srv          load:    - prompt with length    3593, lcp =    1281, f_keep = 0.357, f_sim = 1.000
+swu_slm_ollama  | srv        update:  - cache state: 2 prompts, 809.505 MiB (limits: 8192.000 MiB, 4096 tokens, 58249 est)
+swu_slm_ollama  | srv        update:    - prompt 0x295e3120:    2163 tokens, checkpoints:  0,   304.197 MiB
+swu_slm_ollama  | srv        update:    - prompt 0x295ded00:    3593 tokens, checkpoints:  0,   505.308 MiB
+swu_slm_ollama  | srv  get_availabl: prompt cache update took 284.63 ms
+swu_slm_ollama  | slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+swu_slm_ollama  | slot launch_slot_: id  0 | task -1 | sampler params: 
+swu_slm_ollama  | 	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+swu_slm_ollama  | 	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+swu_slm_ollama  | 	top_k = 20, top_p = 0.950, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.200
+swu_slm_ollama  | 	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+swu_slm_ollama  | slot launch_slot_: id  0 | task 5247 | processing task, is_child = 0
+swu_slm_ollama  | slot   operator(): id  0 | task 5247 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 1281
+swu_slm_ollama  | slot   operator(): id  0 | task 5247 | need to evaluate at least 1 token for each active slot (n_past = 1281, task.n_tokens() = 1281)
+swu_slm_ollama  | slot   operator(): id  0 | task 5247 | n_past was set to 1280
+swu_slm_ollama  | slot   operator(): id  0 | task 5247 | cached n_tokens = 1280, memory_seq_rm [1280, end)
+swu_slm_ollama  | slot init_sampler: id  0 | task 5247 | init sampler, took 0.11 ms, tokens: text = 1281, total = 1281
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:45 | 200 |       89.77µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:45 | 200 |     1.08883ms |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    100, tg =  14.01 t/s, tg_3s =  14.15 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    139, tg =  13.65 t/s, tg_3s =  12.84 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:55 | 200 |      47.252µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:54:55 | 200 |      260.81µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    181, tg =  13.70 t/s, tg_3s =  13.84 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    223, tg =  13.75 t/s, tg_3s =  13.98 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    265, tg =  13.75 t/s, tg_3s =  13.78 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:05 | 200 |      48.579µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:05 | 200 |     269.035µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    307, tg =  13.75 t/s, tg_3s =  13.75 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    348, tg =  13.71 t/s, tg_3s =  13.38 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    389, tg =  13.68 t/s, tg_3s =  13.47 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    430, tg =  13.67 t/s, tg_3s =  13.52 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:15 | 200 |      40.802µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:15 | 200 |     279.425µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    471, tg =  13.66 t/s, tg_3s =  13.58 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    513, tg =  13.66 t/s, tg_3s =  13.67 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    553, tg =  13.63 t/s, tg_3s =  13.30 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:25 | 200 |       34.02µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:25 | 200 |     222.543µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    594, tg =  13.62 t/s, tg_3s =  13.40 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    634, tg =  13.58 t/s, tg_3s =  13.05 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    673, tg =  13.53 t/s, tg_3s =  12.82 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:35 | 200 |      46.901µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:35 | 200 |     229.817µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    711, tg =  13.48 t/s, tg_3s =  12.56 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    749, tg =  13.43 t/s, tg_3s =  12.64 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    788, tg =  13.39 t/s, tg_3s =  12.67 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    826, tg =  13.36 t/s, tg_3s =  12.63 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:45 | 200 |      38.611µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:45 | 200 |      213.32µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    864, tg =  13.31 t/s, tg_3s =  12.46 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    901, tg =  13.27 t/s, tg_3s =  12.31 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    938, tg =  13.22 t/s, tg_3s =  12.12 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:55 | 200 |      41.819µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:55:55 | 200 |      274.76µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =    975, tg =  13.18 t/s, tg_3s =  12.31 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1010, tg =  13.12 t/s, tg_3s =  11.55 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1041, tg =  13.01 t/s, tg_3s =  10.28 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:05 | 200 |        43.8µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:05 | 200 |      230.52µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1077, tg =  12.96 t/s, tg_3s =  11.75 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1111, tg =  12.91 t/s, tg_3s =  11.31 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1146, tg =  12.86 t/s, tg_3s =  11.58 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1182, tg =  12.83 t/s, tg_3s =  11.84 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:16 | 200 |      40.701µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:16 | 200 |     237.059µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1220, tg =  12.81 t/s, tg_3s =  12.35 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1257, tg =  12.79 t/s, tg_3s =  12.11 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1294, tg =  12.77 t/s, tg_3s =  12.24 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:26 | 200 |       44.24µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:26 | 200 |     256.597µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1330, tg =  12.74 t/s, tg_3s =  11.70 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1364, tg =  12.69 t/s, tg_3s =  11.08 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1397, tg =  12.65 t/s, tg_3s =  10.91 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:36 | 200 |       69.37µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:36 | 200 |     194.882µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1429, tg =  12.58 t/s, tg_3s =  10.39 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1459, tg =  12.51 t/s, tg_3s =   9.81 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1489, tg =  12.45 t/s, tg_3s =   9.93 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:46 | 200 |      37.733µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:46 | 200 |     356.706µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1524, tg =  12.42 t/s, tg_3s =  11.56 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1558, tg =  12.39 t/s, tg_3s =  11.07 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1592, tg =  12.36 t/s, tg_3s =  11.17 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1627, tg =  12.34 t/s, tg_3s =  11.60 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:56 | 200 |      35.561µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:56:56 | 200 |     318.365µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1661, tg =  12.32 t/s, tg_3s =  11.28 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1695, tg =  12.30 t/s, tg_3s =  11.26 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1730, tg =  12.28 t/s, tg_3s =  11.38 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:06 | 200 |      50.193µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:06 | 200 |     245.522µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1764, tg =  12.25 t/s, tg_3s =  11.08 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1798, tg =  12.23 t/s, tg_3s =  11.14 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1832, tg =  12.21 t/s, tg_3s =  11.10 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:16 | 200 |      36.102µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:16 | 200 |     198.662µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1862, tg =  12.16 t/s, tg_3s =   9.75 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1890, tg =  12.10 t/s, tg_3s =   9.13 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1921, tg =  12.06 t/s, tg_3s =  10.05 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1953, tg =  12.03 t/s, tg_3s =  10.60 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:26 | 200 |      83.996µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:26 | 200 |       267.7µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   1986, tg =  12.01 t/s, tg_3s =  10.78 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2018, tg =  11.98 t/s, tg_3s =  10.37 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2050, tg =  11.95 t/s, tg_3s =  10.58 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:36 | 200 |      31.207µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:36 | 200 |     330.267µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2082, tg =  11.93 t/s, tg_3s =  10.54 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2115, tg =  11.91 t/s, tg_3s =  10.80 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2146, tg =  11.88 t/s, tg_3s =  10.13 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:46 | 200 |      42.364µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:46 | 200 |     243.986µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2179, tg =  11.86 t/s, tg_3s =  10.79 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2209, tg =  11.83 t/s, tg_3s =   9.98 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2238, tg =  11.79 t/s, tg_3s =   9.57 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2270, tg =  11.77 t/s, tg_3s =  10.46 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:56 | 200 |      41.906µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:57:56 | 200 |     313.331µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2302, tg =  11.75 t/s, tg_3s =  10.42 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2334, tg =  11.73 t/s, tg_3s =  10.62 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | n_gen =   2366, tg =  11.72 t/s, tg_3s =  10.45 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:06 | 200 |       41.03µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:06 | 200 |     250.307µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 | prompt eval time =      87.89 ms /     1 tokens (   87.89 ms per token,    11.38 tokens per second)
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 |        eval time =  203970.41 ms /  2388 tokens (   85.45 ms per token,    11.70 tokens per second)
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 |       total time =  204058.30 ms /  2389 tokens
+swu_slm_ollama  | slot print_timing: id  0 | task 5247 |    graphs reused =       7596
+swu_slm_ollama  | slot      release: id  0 | task 5247 | stop processing: n_tokens = 3668, truncated = 0
+swu_slm_ollama  | srv  update_slots: all slots are idle
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:07 | 200 |         3m24s |      172.18.0.3 | POST     "/api/generate"
+swu_slm_ollama  | srv  server_strea: conv_id= (empty=1)
+swu_slm_ollama  | slot get_availabl: id  0 | task -1 |  - checking sim = 1.000 (1281/1281) > 0.100
+swu_slm_ollama  | slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 1.000 (> 0.100 thold), f_keep = 0.349
+swu_slm_ollama  | srv  get_availabl: updating prompt cache
+swu_slm_ollama  | srv   prompt_save:  - saving prompt with length 3668, total state size = 515.855 MiB (draft: 0.000 MiB)
+swu_slm_ollama  | srv          load:  - looking for better prompt, base f_keep = 0.349, f_sim = 1.000
+swu_slm_ollama  | srv          load:    - prompt with length    2163, lcp =       4, f_keep = 0.002, f_sim = 0.003
+swu_slm_ollama  | srv          load:    - prompt with length    3593, lcp =    1281, f_keep = 0.357, f_sim = 1.000
+swu_slm_ollama  | srv          load:    - prompt with length    3668, lcp =    1281, f_keep = 0.349, f_sim = 1.000
+swu_slm_ollama  | srv        update:  - cache state: 3 prompts, 1325.360 MiB (limits: 8192.000 MiB, 4096 tokens, 58249 est)
+swu_slm_ollama  | srv        update:    - prompt 0x295e3120:    2163 tokens, checkpoints:  0,   304.197 MiB
+swu_slm_ollama  | srv        update:    - prompt 0x295ded00:    3593 tokens, checkpoints:  0,   505.308 MiB
+swu_slm_ollama  | srv        update:    - prompt 0x295d8520:    3668 tokens, checkpoints:  0,   515.855 MiB
+swu_slm_ollama  | srv  get_availabl: prompt cache update took 310.28 ms
+swu_slm_ollama  | slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+swu_slm_ollama  | slot launch_slot_: id  0 | task -1 | sampler params: 
+swu_slm_ollama  | 	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+swu_slm_ollama  | 	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+swu_slm_ollama  | 	top_k = 20, top_p = 0.950, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.200
+swu_slm_ollama  | 	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+swu_slm_ollama  | slot launch_slot_: id  0 | task 7636 | processing task, is_child = 0
+swu_slm_ollama  | slot   operator(): id  0 | task 7636 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 1281
+swu_slm_ollama  | slot   operator(): id  0 | task 7636 | need to evaluate at least 1 token for each active slot (n_past = 1281, task.n_tokens() = 1281)
+swu_slm_ollama  | slot   operator(): id  0 | task 7636 | n_past was set to 1280
+swu_slm_ollama  | slot   operator(): id  0 | task 7636 | cached n_tokens = 1280, memory_seq_rm [1280, end)
+swu_slm_ollama  | slot init_sampler: id  0 | task 7636 | init sampler, took 0.14 ms, tokens: text = 1281, total = 1281
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    100, tg =  13.28 t/s, tg_3s =  13.41 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:17 | 200 |      30.599µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:17 | 200 |     220.575µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    134, tg =  12.69 t/s, tg_3s =  11.24 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    168, tg =  12.37 t/s, tg_3s =  11.27 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    205, tg =  12.35 t/s, tg_3s =  12.24 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:27 | 200 |      36.977µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:27 | 200 |     302.084µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    243, tg =  12.36 t/s, tg_3s =  12.43 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    278, tg =  12.22 t/s, tg_3s =  11.34 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    312, tg =  12.10 t/s, tg_3s =  11.21 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    351, tg =  12.18 t/s, tg_3s =  12.86 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:37 | 200 |      33.854µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:37 | 200 |     304.397µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    390, tg =  12.23 t/s, tg_3s =  12.72 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    428, tg =  12.25 t/s, tg_3s =  12.43 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    468, tg =  12.33 t/s, tg_3s =  13.21 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:47 | 200 |      42.709µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:47 | 200 |      317.77µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    508, tg =  12.38 t/s, tg_3s =  13.02 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    548, tg =  12.44 t/s, tg_3s =  13.25 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    588, tg =  12.49 t/s, tg_3s =  13.19 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:57 | 200 |      48.171µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:58:57 | 200 |     266.674µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    628, tg =  12.53 t/s, tg_3s =  13.13 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    667, tg =  12.54 t/s, tg_3s =  12.84 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    706, tg =  12.57 t/s, tg_3s =  12.98 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:07 | 200 |      38.801µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:07 | 200 |     240.393µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    744, tg =  12.57 t/s, tg_3s =  12.55 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    783, tg =  12.58 t/s, tg_3s =  12.74 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    821, tg =  12.58 t/s, tg_3s =  12.56 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    853, tg =  12.47 t/s, tg_3s =  10.35 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:17 | 200 |      27.131µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:17 | 200 |     192.397µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    886, tg =  12.40 t/s, tg_3s =  10.74 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    921, tg =  12.36 t/s, tg_3s =  11.44 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    957, tg =  12.34 t/s, tg_3s =  11.74 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:27 | 200 |       27.07µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:27 | 200 |     354.303µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =    996, tg =  12.35 t/s, tg_3s =  12.71 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1034, tg =  12.36 t/s, tg_3s =  12.66 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1065, tg =  12.28 t/s, tg_3s =  10.17 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:37 | 200 |        90.2µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:37 | 200 |      283.24µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1101, tg =  12.26 t/s, tg_3s =  11.69 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1138, tg =  12.26 t/s, tg_3s =  12.15 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1175, tg =  12.26 t/s, tg_3s =  12.30 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1212, tg =  12.25 t/s, tg_3s =  12.02 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:47 | 200 |      55.963µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:47 | 200 |     394.096µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1248, tg =  12.24 t/s, tg_3s =  11.84 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1285, tg =  12.24 t/s, tg_3s =  12.18 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1322, tg =  12.24 t/s, tg_3s =  12.12 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:57 | 200 |      50.667µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 06:59:57 | 200 |     249.291µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1359, tg =  12.24 t/s, tg_3s =  12.28 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1396, tg =  12.24 t/s, tg_3s =  12.15 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1429, tg =  12.20 t/s, tg_3s =  10.89 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:07 | 200 |      43.276µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:07 | 200 |     273.824µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1465, tg =  12.19 t/s, tg_3s =  11.92 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1499, tg =  12.17 t/s, tg_3s =  11.22 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1534, tg =  12.16 t/s, tg_3s =  11.65 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1565, tg =  12.11 t/s, tg_3s =  10.30 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:18 | 200 |       38.75µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:18 | 200 |     258.365µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1596, tg =  12.06 t/s, tg_3s =   9.96 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1627, tg =  12.02 t/s, tg_3s =  10.06 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1657, tg =  11.97 t/s, tg_3s =   9.96 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:28 | 200 |      40.222µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:28 | 200 |     458.523µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1689, tg =  11.94 t/s, tg_3s =  10.45 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1721, tg =  11.91 t/s, tg_3s =  10.51 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1749, tg =  11.85 t/s, tg_3s =   9.21 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:38 | 200 |      40.561µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:38 | 200 |     334.982µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1778, tg =  11.81 t/s, tg_3s =   9.59 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1809, tg =  11.78 t/s, tg_3s =  10.21 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1839, tg =  11.74 t/s, tg_3s =   9.89 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1867, tg =  11.69 t/s, tg_3s =   9.14 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:48 | 200 |     101.763µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:48 | 200 |     293.055µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1894, tg =  11.64 t/s, tg_3s =   8.99 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1921, tg =  11.59 t/s, tg_3s =   8.86 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1950, tg =  11.55 t/s, tg_3s =   9.42 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:58 | 200 |      42.236µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:00:58 | 200 |     173.933µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   1982, tg =  11.53 t/s, tg_3s =  10.61 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2014, tg =  11.51 t/s, tg_3s =  10.35 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2044, tg =  11.49 t/s, tg_3s =   9.95 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:08 | 200 |       45.62µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:08 | 200 |      197.52µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2072, tg =  11.45 t/s, tg_3s =   9.21 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2103, tg =  11.42 t/s, tg_3s =   9.80 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2131, tg =  11.38 t/s, tg_3s =   9.27 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2159, tg =  11.35 t/s, tg_3s =   9.26 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:18 | 200 |      54.042µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:18 | 200 |     258.703µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2190, tg =  11.33 t/s, tg_3s =  10.06 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2221, tg =  11.31 t/s, tg_3s =  10.30 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2251, tg =  11.29 t/s, tg_3s =   9.85 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:28 | 200 |      29.096µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:28 | 200 |     195.617µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2281, tg =  11.27 t/s, tg_3s =   9.78 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2309, tg =  11.24 t/s, tg_3s =   9.21 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2339, tg =  11.22 t/s, tg_3s =   9.98 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:38 | 200 |      36.719µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:38 | 200 |     281.904µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2369, tg =  11.20 t/s, tg_3s =   9.89 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2397, tg =  11.18 t/s, tg_3s =   9.33 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2428, tg =  11.16 t/s, tg_3s =  10.11 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:48 | 200 |      41.775µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:48 | 200 |     299.828µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2460, tg =  11.15 t/s, tg_3s =  10.36 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2490, tg =  11.13 t/s, tg_3s =   9.96 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2521, tg =  11.12 t/s, tg_3s =  10.03 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2553, tg =  11.11 t/s, tg_3s =  10.64 t/s
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:58 | 200 |      41.856µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:01:58 | 200 |         269µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2585, tg =  11.10 t/s, tg_3s =  10.53 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | n_gen =   2617, tg =  11.10 t/s, tg_3s =  10.59 t/s
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 | prompt eval time =      76.24 ms /     1 tokens (   76.24 ms per token,    13.12 tokens per second)
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 |        eval time =  236851.17 ms /  2629 tokens (   90.13 ms per token,    11.10 tokens per second)
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 |       total time =  236927.41 ms /  2630 tokens
+swu_slm_ollama  | slot print_timing: id  0 | task 7636 |    graphs reused =      10214
+swu_slm_ollama  | slot      release: id  0 | task 7636 | stop processing: n_tokens = 3909, truncated = 0
+swu_slm_ollama  | srv  update_slots: all slots are idle
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:05 | 200 |         3m57s |      172.18.0.3 | POST     "/api/generate"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:08 | 200 |      26.092µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:08 | 200 |     224.375µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:18 | 200 |      21.355µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:18 | 200 |     137.125µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:28 | 200 |      21.815µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:28 | 200 |     139.889µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:39 | 200 |      18.303µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:39 | 200 |     164.496µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:49 | 200 |      20.813µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:49 | 200 |     134.753µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:59 | 200 |      20.468µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:02:59 | 200 |     132.141µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:09 | 200 |      34.236µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:09 | 200 |     146.614µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:19 | 200 |      19.773µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:19 | 200 |     136.917µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:29 | 200 |      22.887µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:29 | 200 |     133.496µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:39 | 200 |       23.94µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:39 | 200 |     140.258µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:49 | 200 |      90.964µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:49 | 200 |     129.185µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:59 | 200 |      24.894µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:03:59 | 200 |     152.025µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:09 | 200 |       21.73µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:09 | 200 |     128.409µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:19 | 200 |      35.818µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:19 | 200 |     146.381µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:29 | 200 |      21.938µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:29 | 200 |     147.792µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:39 | 200 |       22.42µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:39 | 200 |      145.13µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:49 | 200 |        24.6µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:49 | 200 |     139.566µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:59 | 200 |       21.74µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:04:59 | 200 |     140.577µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:09 | 200 |      22.502µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:09 | 200 |     139.837µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:19 | 200 |      19.954µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:19 | 200 |     120.873µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:29 | 200 |       21.52µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:29 | 200 |     167.552µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:39 | 200 |      24.055µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:39 | 200 |     145.071µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:49 | 200 |     222.692µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:49 | 200 |     249.356µs |       127.0.0.1 | GET      "/api/tags"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:59 | 200 |      19.748µs |       127.0.0.1 | HEAD     "/"
+swu_slm_ollama  | [GIN] 2026/09/06 - 07:05:59 | 200 |     123.515µs |       127.0.0.1 | GET      "/api/tags"
+[Kswu_slm_ollama exited with code 0

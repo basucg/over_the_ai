@@ -1,0 +1,21 @@
+The OTA state is DownloadFailure (5): the package download failed.
+Logs: ota_update_engine.log (OTA service) and vDM.log (Redbend client, filtered
+to relevant lines; it may be empty).
+
+Look for these lines, in this order:
+1. ota_update_engine.log: 'E_IPC_EVENT_DMA_MSG_DNLD_FAILURE: error=<n> willRetry=<0|1>'
+and 'Param DMA_VAR_ERROR=<n>' give the download error code. 'willRetry=1' with
+'otaState = 24' means the download was interrupted and will retry. The last
+'willRetry=0' with 'otaState = 5' is the final failure after retries ended.
+2. vDM.log: 'Updating var DMA_VAR_ERROR to <n>', 'DMA_VAR_ERC_ERROR_RESULT_CODE'
+(result category), '[Core_DL][ERROR]' (failing download step) and
+'shouldRetry inCounter:X, inRetryMaxCount:Y'.
+
+Rules:
+- Name the error code in the Failure Reason, copied exactly as written in the log
+(do not convert it). Use a result code or category name only if it appears in a
+log line.
+- Prefer the lines above as Evidence over generic 'B2D_DNLD_FAILURE' event lines.
+- Do not explain what a code means unless a log line does.
+- If vDM.log is empty, say so. If no such lines are present, say the logs do not
+show the cause.

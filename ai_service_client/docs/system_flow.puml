@@ -1,0 +1,103 @@
+@startuml AI_SWUpdate_Diagnostic_Flow
+skinparam SequenceMessageAlignment center
+skinparam BoxPadding 10
+skinparam ParticipantPadding 10
+
+title End-to-End SWUpdate AI Diagnostic Architecture (Server-Driven Request Flow)
+
+box "Android ECU Target" #LightGreen
+participant "FcSwUpdateSrv\n(SWUpdate Daemon)" as SWU
+participant "Android Logcat / OS\n(Process Streams)" as LOGS
+participant "ai_service_client\n(Binder Client & Log Collector)" as CLIENT
+end box
+
+box "Linux Host / Docker Server (Air-Gapped)" #LightCyan
+participant "ai_diagnostic_server\n(Python TCP Server)" as AISERVER
+participant "Ollama SLM\n(gemma3:12b)" as SLM
+participant "Linux File System\n(/tmp/ai-swupdate-reports/)" as FS
+end box
+
+== 1. Initialization & Session Monitoring ==
+
+CLIENT -> SWU : Binder connect & register BnUpdateCallback
+activate CLIENT
+SWU --> CLIENT : Connection confirmed
+CLIENT -> AISERVER : Open Bidirectional TCP Socket (Port 9000)
+activate AISERVER
+
+loop SWUpdate Execution Lifecycle
+    SWU -> CLIENT : onUpdateState(trUpdState)
+    CLIENT -> AISERVER : JSON {"event": "onUpdateState", "state": 5, ...}
+    AISERVER -> AISERVER : Record event in session_events
+
+    SWU -> CLIENT : onUpdateProgress(trUpdProgress)
+    CLIENT -> AISERVER : JSON {"event": "onUpdateProgress", "module": "system_a", ...}
+    AISERVER -> AISERVER : Track progress history
+end
+
+== 2. Error Notification & Server-Driven Log Request ==
+
+SWU -> CLIENT : onUpdateError(trErrorIds)
+CLIENT -> AISERVER : JSON {"event": "onUpdateError", "errorCode": 28, ...}
+AISERVER -> AISERVER : Log critical error event
+
+== 3. API 1: System Details Negotiation ==
+
+AISERVER -> CLIENT : TCP JSON {"command": "request_system_details"}
+note over CLIENT
+Execute API 1: getSystemInformation()
+- product_class: "IVI"
+- primary_os: "Android"
+- secondary_os: ["Linux"]
+end note
+CLIENT -> AISERVER : JSON {"event": "systemDetailsResponse", "product_class": "IVI", "primary_os": "Android", ...}
+
+AISERVER -> AISERVER : Compute requested artifacts from SystemDetails\n(e.g., ["update_engine_logs", "logcat_logs", "update_persistent_logs", "downloadpipe"])
+
+== 4. API 2: Dynamic Log Collection & Packaging ==
+
+AISERVER -> CLIENT : TCP JSON {"command": "request_artifacts", "artifacts": ["update_engine_logs", "logcat_logs", ...]}
+
+note over CLIENT
+Execute API 2: getRequiredFiles(requestedArtifacts)
+1. For each tag: logcat -d -s <TAG> > /data/system/fcswupdate/tmp/ai_diagnostics/<TAG>.log
+2. Package all logs into swupdate-diagnostics-<timestamp>.tar.gz
+3. Base64 encode archive string
+end note
+
+CLIENT -> LOGS : Extract logcat streams for requested tags
+activate LOGS
+LOGS --> CLIENT : Return log streams
+deactivate LOGS
+
+CLIENT -> AISERVER : JSON {"event": "swUpdateDiagnosticArchive", "archiveData": "<base64>", ...}
+deactivate CLIENT
+
+== 5. Offline SLM Diagnosis & Report Generation ==
+
+note over AISERVER
+1. Save .tar.gz archive to /tmp/ai-swupdate-diagnostics/
+2. Extract in-memory log excerpts for analysis
+end note
+
+AISERVER -> AISERVER : Assemble diagnostic prompt\n(Error Code + Progress History + Process Logs)
+
+AISERVER -> SLM : HTTP POST /api/generate {"model": "gemma3:12b", "prompt": "..."}
+activate SLM
+note over SLM
+100% Offline Inference
+(Air-Gapped Network internal: true)
+end note
+SLM --> AISERVER : Structured Diagnostic Analysis
+deactivate SLM
+
+AISERVER -> FS : Save report file swupdate-report-<timestamp>.md
+activate FS
+FS --> AISERVER : File saved
+deactivate FS
+
+AISERVER -> AISERVER : Print formatted diagnosis report to Terminal / stdout
+
+deactivate AISERVER
+
+@enduml

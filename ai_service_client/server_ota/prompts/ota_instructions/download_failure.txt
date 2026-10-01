@@ -1,0 +1,9 @@
+The OTA state is DownloadFailure (5): the package download failed.
+Logs: ota_update_engine.log (OTA service) and vDM.log (Redbend client, filtered to relevant lines).
+
+Read the logs in this order:
+1. vDM.log: find 'Updating var DMA_VAR_ERROR to <n>' and 'STSTRK_VAR_VDM_ERROR to <n>' (decimal VDM error codes; report each as decimal and hex). 'DMA_VAR_ERC_ERROR_RESULT_CODE' names the category: DL_NETWORK is a network problem, MAX_DOWNLOAD_ATTEMPT_FAILED means retries were exhausted.
+2. vDM.log: '[Core_DL][ERROR]' lines give the failing download step. 'DMA_redbend_shouldRetry inCounter:X, inRetryMaxCount:Y' and 'DMA_VAR_DL_WILL_RETRY=0' show no retry is left.
+3. ota_update_engine.log: 'E_IPC_EVENT_DMA_MSG_DNLD_FAILURE: error=<n> willRetry=<0|1>' confirms the code the OTA service received. 'sendOtaStateUpdate otaState = 24' earlier means the download was interrupted and waited for a reconnect; 'otaState = 5' is the final failure.
+
+Rules: name the error code and result code you found in the Failure Reason. Do not explain a code's meaning unless a log line does. If no such lines are present, say the logs do not show the cause.

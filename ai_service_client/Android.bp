@@ -1,0 +1,122 @@
+//
+// Copyright (C) 2024 Robert Bosch GmbH. All rights reserved.
+//
+
+filegroup {
+    name: "libai_service_client_fota_hmi_aidl",
+    srcs: [
+        "aidl/fota/hmi/IOtaHmiService.aidl",
+        "aidl/fota/hmi/IOtaHmiServiceCallback.aidl",
+        "aidl/fota/hmi/ParcelableActivePackageInfo.aidl",
+        "aidl/fota/hmi/ParcelableDynamicHMIInfo.aidl",
+        "aidl/fota/hmi/ParcelableOtaCommandCode.aidl",
+        "aidl/fota/hmi/ParcelableOtaDisplayState.aidl",
+        "aidl/fota/hmi/ParcelableOtaUpdateHistory.aidl",
+        "aidl/fota/hmi/ParcelableSystemInfo.aidl",
+        "aidl/fota/hmi/ParcelableOtaCleanAlert.aidl",
+    ],
+    path: "aidl",
+}
+
+cc_library_static {
+    name: "libai_service_client",
+    defaults: [
+        "swu_compiler_settings",
+    ],
+    system_ext_specific: true,
+
+    srcs: [
+        "src/SwuUpdateCallback.cpp",
+        "src/SwuNotificationClient.cpp",
+        "src/FotaHmiNotificationClient.cpp",
+        "src/TcpNotificationSender.cpp",
+        ":libai_service_client_fota_hmi_aidl",
+        "aidl/fota/parcelables/source/*.cpp",
+    ],
+
+    local_include_dirs: [
+        "include",
+        "aidl/fota/parcelables/include",
+    ],
+
+    export_include_dirs: [
+        "include",
+        "aidl/fota/parcelables/include",
+    ],
+
+    header_libs: [
+        "swu-common-util-hdrs",
+        "swu-generic-hdrs",
+    ],
+
+    cflags: [
+        "-fexceptions",
+        "-Wall",
+        "-Werror",
+        "-Wno-unused-parameter",
+        "-Wno-sign-conversion",
+        "-DLOG_TAG=\"AIServiceClient_SWU\"",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libutils",
+        "libcutils",
+        "liblog",
+        "swu_common_util_log",
+        "libfcswupdatesrv_aidl-cpp",
+    ],
+
+    aidl: {
+        export_aidl_headers: true,
+        local_include_dirs: [
+            "aidl",
+        ],
+    },
+}
+
+cc_binary {
+    name: "ai_service_client",
+    init_rc: ["ai_service_client.rc"],
+    defaults: [
+        "swu_compiler_settings",
+    ],
+    system_ext_specific: true,
+
+    srcs: [
+        "src/main.cpp",
+    ],
+
+    local_include_dirs: [
+        "include",
+        "aidl/fota/parcelables/include",
+    ],
+
+    header_libs: [
+        "swu-common-util-hdrs",
+        "swu-generic-hdrs",
+    ],
+
+    static_libs: [
+        "libai_service_client",
+    ],
+
+    cflags: [
+        "-fexceptions",
+        "-Wall",
+        "-Werror",
+        "-Wno-unused-parameter",
+        "-DLOG_TAG=\"AIServiceClient_SWU\"",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libutils",
+        "libcutils",
+        "liblog",
+        "swu_common_util_log",
+        "libfcswupdatesrv_aidl-cpp",
+    ],
+}

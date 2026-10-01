@@ -1,0 +1,16 @@
+service ai_service_client /system_ext/bin/ai_service_client -ip 127.0.0.1 -p 9000
+    class main
+    user root
+    group root system shell
+    disabled
+
+# Start automatically when the SWUpdate service becomes active
+on property:init.svc.da3_app_fcswupdate=running
+    start ai_service_client
+
+on property:init.svc.app_fcswupdate=running
+    start ai_service_client
+
+# Fallback: start on boot completed (the client will retry until FcSwUpdateSrv is reachable)
+on property:sys.boot_completed=1
+    start ai_service_client

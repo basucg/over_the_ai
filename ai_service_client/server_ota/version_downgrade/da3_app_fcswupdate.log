@@ -1,0 +1,359 @@
+--------- beginning of main
+09-05 08:11:56.898  4632  4632 I da3_app_fcswupdate: Inside Security_UpdateHandler Constructor
+09-05 08:11:57.051  4632  4632 I da3_app_fcswupdate: sdsKeyDecryption::Constructor
+09-05 08:11:57.054  4632  4632 I da3_app_fcswupdate: sdsKeyHandler::Constructor
+09-05 08:11:57.056  4632  4632 I da3_app_fcswupdate: sdsKeyHandler::Constructor
+09-05 08:11:57.057  4632  4632 I da3_app_fcswupdate: sdsKeyHandler::Constructor
+09-05 08:11:57.057  4632  4632 I da3_app_fcswupdate: sdsKeyHandler::Constructor
+09-05 08:11:57.057  4632  4632 I da3_app_fcswupdate: SDSKeystore_Wrapper::Constructor
+09-05 08:11:57.057  4632  4632 I da3_app_fcswupdate: sdsKeyGenWrapper::Constructor
+09-05 08:11:57.057  4632  4632 I da3_app_fcswupdate: sdsKeyDecryption::Constructor
+09-05 08:11:57.057  4632  4632 I da3_app_fcswupdate: Inside security encrypt Constructor
+09-05 08:11:57.059  4632  4632 I da3_app_fcswupdate: Inside security encrypt Constructor
+09-05 08:11:57.059  4632  4632 I da3_app_fcswupdate: sdsKeyGenWrapper::Constructor
+09-05 08:11:57.059  4632  4632 I da3_app_fcswupdate: sdsKeyDecryption::Constructor
+09-05 08:11:57.059  4632  4632 I da3_app_fcswupdate: Inside ExternalKeyHandle Constructor
+09-05 08:11:57.059  4632  4632 I da3_app_fcswupdate: sdsKeyHandler::Constructor
+09-05 08:11:57.060  4632  4632 I da3_app_fcswupdate: SDSKeystore_Wrapper::Constructor
+09-05 08:11:57.060  4632  4632 I da3_app_fcswupdate: sdsKeyDecryption::Constructor
+09-05 08:11:57.060  4632  4632 I da3_app_fcswupdate: Inside security encrypt Constructor
+09-05 08:11:57.060  4632  4632 I da3_app_fcswupdate: sdsKeyDecryption::Constructor
+09-05 08:11:57.060  4632  4632 I da3_app_fcswupdate: Inside HMAC_Verify Constructor
+--------- beginning of system
+09-05 08:11:57.444  4632  4632 I da3_app_fcswupdate: FcSwUpdCore::instance()->setProjectSpecific with FcSwUpdProject instance
+09-05 08:11:57.444  4632  4632 D da3_app_fcswupdate: FcSwUpdCore(0xb4000077d4e6e9e0)::FcSwUpdCore CTOR
+09-05 08:11:57.444  4632  4632 I da3_app_fcswupdate: FcSwUpdProject::CTOR with name=FcSwUpdProject
+09-05 08:11:57.444  4632  4632 I da3_app_fcswupdate: BinderService::BinderService() CTOR start
+09-05 08:11:57.444  4632  4632 I da3_app_fcswupdate: BinderService::vVerifyRecoveryUpdate() START
+09-05 08:11:57.444  4632  4632 I da3_app_fcswupdate: FcSwUpdateS2RHandler::startPowerStateListener() START
+09-05 08:11:57.444  4632  4632 I da3_app_fcswupdate: FcSwUpdateS2RHandler::startPowerStateListener() END
+09-05 08:11:57.444  4632  4632 I da3_app_fcswupdate: FcSwUpdSwuApp::executeApp() START
+09-05 08:11:57.444  4632  4632 I da3_app_fcswupdate: FcSwUpdateComponent::FcSwUpdateComponent() CTOR start
+09-05 08:11:57.444  4632  4632 D da3_app_fcswupdate: Thread pool is created with size: 1 threads
+09-05 08:11:57.445  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb400007754e704a0)
+09-05 08:11:57.445  4632  4632 D da3_app_fcswupdate: UpdateDataStore::Constructor()
+09-05 08:11:57.445  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb4000077e4e75c38)
+09-05 08:11:57.445  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb4000077d4e6e9e0)
+09-05 08:11:57.445  4632  4632 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=bosch.service.swupdate.recovery.mode val=0
+09-05 08:11:57.445  4632  4632 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:11:57.445  4632  4632 D da3_app_fcswupdate: MemberList: vInit START
+09-05 08:11:57.445  4632  4632 D da3_app_fcswupdate: MemberList: vInit (BinderService)
+09-05 08:11:57.445  4632  4632 I da3_app_fcswupdate: BinderService::vInit() start
+09-05 08:11:57.446  4632  4699 I da3_app_fcswupdate: FcSwUpdateS2RHandler::powerStateListener() Connecting to CarPowerManager
+09-05 08:11:57.447  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb400007734e7da28)
+09-05 08:11:57.447  4632  4632 D da3_app_fcswupdate: FcswupdUsbMonitor::FcswupdUsbMonitor()
+09-05 08:11:57.447  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb400007744e74ad8)
+09-05 08:11:57.447  4632  4632 D da3_app_fcswupdate: MemberList: vInit START
+09-05 08:11:57.447  4632  4632 I da3_app_fcswupdate: FcSwUpdateProgress::getName() START
+09-05 08:11:57.447  4632  4632 D da3_app_fcswupdate: MemberList: vInit (FcSwUpdateProgress)
+09-05 08:11:57.447  4632  4632 I da3_app_fcswupdate: FcSwUpdateProgress::vInit START
+09-05 08:11:57.447  4632  4632 I da3_app_fcswupdate: FcSwUpdateProgress::vInit END
+09-05 08:11:57.447  4632  4632 D da3_app_fcswupdate: MemberList: vInit (UNKNOWN)
+09-05 08:11:57.447  4632  4632 I da3_app_fcswupdate: FcswupdUsbMonitor::vInit()
+09-05 08:11:57.447  4632  4632 I da3_app_fcswupdate: FcswupdUsbMonitor::connectToUsbNativeService 
+09-05 08:11:57.450  4632  4632 I da3_app_fcswupdate: FcswupdUsbMonitor::connectToUsbNativeService connected to   IMSDDeviceManager
+09-05 08:11:57.450  4632  4632 I da3_app_fcswupdate: FcswupdUsbMonitor::registerUSBServiceCallback 
+09-05 08:11:57.450  4632  4699 I da3_app_fcswupdate: FcSwUpdateS2RHandler::setupCarPowerManager() Setting up CarPowerManager
+09-05 08:11:57.450  4632  4699 I da3_app_fcswupdate: FcSwUpdateS2RHandler::setupCarPowerManager() Calling setListener
+09-05 08:11:57.451  4632  4632 I da3_app_fcswupdate: FcswupdUsbMonitor::registerUSBServiceCallback status 0 
+09-05 08:11:57.451  4632  4632 D da3_app_fcswupdate: MemberList: vInit END
+09-05 08:11:57.451  4632  4632 D da3_app_fcswupdate: MemberList: vInit (UNKNOWN)
+09-05 08:11:57.451  4632  4632 D da3_app_fcswupdate: UpdateDataStore::vInit()
+09-05 08:11:57.451  4632  4632 D da3_app_fcswupdate: MemberList: vInit (FcSwUpdCore)
+09-05 08:11:57.451  4632  4632 D da3_app_fcswupdate: FcSwUpdCore(0xb4000077d4e6e9e0)::vInit START
+09-05 08:11:57.451  4632  4632 D da3_app_fcswupdate: FcSwUpdCore::vInit: create members ...
+09-05 08:11:57.451  4632  4632 D da3_app_fcswupdate: FcSwUpdCore::vInit: create Config ...
+09-05 08:11:57.451  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb4000078b4e6d820)
+09-05 08:11:57.451  4632  4632 D da3_app_fcswupdate: FcSwUpdCore::vInit: create Config done
+09-05 08:11:57.451  4632  4632 I da3_app_fcswupdate: ConfigPrj::check for cfg-file:/system_ext/etc/swupdate/prjConfig.xml
+09-05 08:11:57.452  4632  4632 I da3_app_fcswupdate: ConfigPrj::found cfg-file:/system_ext/etc/swupdate/prjConfig.xml
+09-05 08:11:57.454  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb400007744e74110)
+09-05 08:11:57.464  4632  4632 E da3_app_fcswupdate: Matching File cmd - find /opt/bosch/swupdate/fcswupdate/autoLoadPlugins -maxdepth 1 -type l -name "lib*" >> /data/system/fcswupdate/tmp/swupd/tempFile.k1yi66
+09-05 08:11:57.596  4632  4632 E da3_app_fcswupdate: Could not find matching file
+09-05 08:11:57.605  4632  4632 I da3_app_fcswupdate: PropDevMgr::PropDevMgr()
+09-05 08:11:57.605  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb400007744e741d0)
+09-05 08:11:57.605  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb4000077b4e78430)
+09-05 08:11:57.605  4632  4632 D da3_app_fcswupdate: CampaignManager(0xb400007784e75410)::CampaignManager CTOR
+09-05 08:11:57.605  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb400007784e75410)
+09-05 08:11:57.605  4632  4632 D da3_app_fcswupdate: XMLFilterChain():add() filter:XMLFilterMatch
+09-05 08:11:57.605  4632  4632 D da3_app_fcswupdate: XMLFilterChain():remove() filter:XMLFilterMatch START
+09-05 08:11:57.605  4632  4632 D da3_app_fcswupdate: XMLFilterChain():remove() filter:XMLFilterMatch END
+09-05 08:11:57.605  4632  4632 D da3_app_fcswupdate: XMLFilterChain():add() filter:set m_activations[XMLFilterMatch] to true
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: FcSwUpdCore::vInit: subscriptions ...
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: FcSwUpdCore::vInit: init members ...
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: MemberList: vInit START
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: MemberList: vInit (Config)
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: MemberList: vInit (FcSwUpdProject)
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: FcSwUpdProjectSpecific::vInit
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: FcSwUpdProject::vInitPrj() START
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=bosch.service.swupdate.recovery.mode val=0
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: FcSwUpdProject::initialize member list
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: FcSwUpdProject::initialize member list
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: MemberList: vInit START
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: MemberList: vInit END
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=bosch.service.swupdate.recovery.mode val=0
+09-05 08:11:57.606  4632  4632 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:11:57.620  4632  4632 I da3_app_fcswupdate: BinderService::vProcess(MsgSrvSetUpdateState) start enState: 1
+09-05 08:11:57.620  4632  4632 D da3_app_fcswupdate: FcSwUpdProject::vOnSystemDataChanged() START
+09-05 08:11:57.620  4632  4632 D da3_app_fcswupdate: RunningCustomerVersion::read() value : qpr1_a12_int_2026.19.0
+09-05 08:11:57.620  4632  4632 D da3_app_fcswupdate: FcSwUpdProject::vOnSystemDataChanged() relName=qpr1_a12_int_2026.19.0
+09-05 08:11:57.620  4632  4632 I da3_app_fcswupdate: BinderService::vProcess(MsgSrvSetUpdateState) start enState: 1
+09-05 08:11:57.621  4632  4632 D da3_app_fcswupdate: FcSwUpdProject::vOnSystemDataChanged() END
+09-05 08:11:57.621  4632  4632 D da3_app_fcswupdate: FcSwUpdProject::vInitPrj() END
+09-05 08:11:57.621  4632  4632 D da3_app_fcswupdate: MemberList: vInit (PropDevMgr)
+09-05 08:11:57.621  4632  4632 I da3_app_fcswupdate: PropDevMgr::vInit()
+09-05 08:11:57.621  4632  4632 D da3_app_fcswupdate: MemberList: vInit (PropProgress)
+09-05 08:11:57.621  4632  4632 D da3_app_fcswupdate: MemberList: vInit (CampaignManager)
+09-05 08:11:57.621  4632  4632 D da3_app_fcswupdate: MemberList: vInit START
+09-05 08:11:57.621  4632  4632 D da3_app_fcswupdate: MemberList: vInit END
+09-05 08:11:57.621  4632  4632 I da3_app_fcswupdate: CampaignManager::vMoveRecoveryLogFilesToFota() START
+09-05 08:11:57.621  4632  4632 E da3_app_fcswupdate: getTempDir: could not create tmp-file
+09-05 08:11:57.621  4632  4632 E da3_app_fcswupdate: Matching File cmd - find /swupdate/ -maxdepth 1 -type f -name "SWU_log*.txt" >> /data/system/fcswupdate/tmp/swupd/tempFile.DEFAULT
+09-05 08:11:57.746  4632  4632 I da3_app_fcswupdate: CampaignManager::vMoveRecoveryLogFilesToFota() END
+09-05 08:11:57.746  4632  4632 D da3_app_fcswupdate: CampaignManager::searchForProgressFile - START
+09-05 08:11:57.746  4632  4632 E da3_app_fcswupdate: getTempDir: could not create tmp-file
+09-05 08:11:57.746  4632  4632 E da3_app_fcswupdate: Matching File cmd - find /data/system/fcswupdate/persistent/ -maxdepth 1 -type f -name "fcswupd_running*.xml" >> /data/system/fcswupdate/tmp/swupd/tempFile.DEFAULT
+09-05 08:11:57.895  4632  4632 D da3_app_fcswupdate: CampaignManager::searchForProgressFile - END
+09-05 08:11:57.895  4632  4632 D da3_app_fcswupdate: vInit(): No progress file is present
+09-05 08:11:57.895  4632  4632 I da3_app_fcswupdate: FcSwUpdProject::vOnFcSwUpdState  enState=1
+09-05 08:11:57.895  4632  4632 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=bosch.service.swupdate.recovery.mode val=0
+09-05 08:11:57.895  4632  4632 D da3_app_fcswupdate: ConfiguratorOtaUpdate CTOR this=0xb4000077a4e74130
+09-05 08:11:57.895  4632  4632 I da3_app_fcswupdate: FcSwUpdCore:vEnterUpdate
+09-05 08:11:57.895  4632  4632 I da3_app_fcswupdate: CampaignManager::vEnterStateConfig
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb4000077a4e74130)
+09-05 08:11:57.896  4632  4632 I da3_app_fcswupdate: ConfiguratorOtaUpdate::vInit
+09-05 08:11:57.896  4632  4632 I da3_app_fcswupdate: FcSwUpdProject::vOnFcSwUpdState  enState=2
+09-05 08:11:57.896  4632  4632 I da3_app_fcswupdate: BinderService::vProcess(MsgSrvSetUpdateState) start enState: 1
+09-05 08:11:57.896  4632  4632 I da3_app_fcswupdate: BinderService::vProcess(MsgSrvSetUpdateState) start enState: 0
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: vInit END
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=bosch.service.swupdate.recovery.mode val=0
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: CampaignManager(0xb400007784e75410)::bIsIdle: m_enState=2 tenState_Idle=1
+09-05 08:11:57.896  4632  4632 I da3_app_fcswupdate: FcSwUpdCore::vInit END idle=0
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: vInit END
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: Thread pool is created with size: 1 threads
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MsgBase::onLoopbackReady START, q-size=0
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MsgBase::onLoopbackReady END
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: SWUCoreComponent: Ctor
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb4000077a4e74eb8)
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: vInit START
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: vInit (SWUCoreComponent)
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: SWUCoreComponent(0xb4000077a4e74eb0)::vInit START
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: SWUCore(0xb4000077b4e78c70)::SWUCore CTOR
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: poAdd(0xb4000077b4e78c78)
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: vInit START
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: vInit (UNKNOWN)
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: SWUCore::vInit()
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: vInit END
+09-05 08:11:57.896  4632  4632 D da3_app_fcswupdate: MemberList: vInit END
+09-05 08:11:57.897  4632  4632 D da3_app_fcswupdate: MsgBase::onLoopbackReady START, q-size=0
+09-05 08:11:57.897  4632  4632 D da3_app_fcswupdate: MsgBase::onLoopbackReady END
+09-05 08:11:57.897  4632  4632 D da3_app_fcswupdate: FcswupdUsbMonitor::vprocess MsgFcSwUpdateComponentReady
+09-05 08:11:57.897  4632  4632 I da3_app_fcswupdate: FcSwUpdateComponent::FcSwUpdateComponent() CTOR end
+09-05 08:11:59.454  4632  4699 I da3_app_fcswupdate: FcSwUpdateS2RHandler::setupCarPowerManager() setListener returned: 0
+09-05 08:11:59.454  4632  4699 I da3_app_fcswupdate: FcSwUpdateS2RHandler::linkToCarServiceDeathNotification() Connecting to CarService
+09-05 08:11:59.456  4632  4699 I da3_app_fcswupdate: FcSwUpdateS2RHandler::linkToCarServiceDeathNotification() Registering for car service death notification
+09-05 08:11:59.456  4632  4699 I da3_app_fcswupdate: FcSwUpdateS2RHandler::linkToCarServiceDeathNotification() linkToDeath status OK
+09-05 08:11:59.456  4632  4699 I da3_app_fcswupdate: FcSwUpdateS2RHandler::setupCarPowerManager() CarPowerManager setup complete
+09-05 08:11:59.456  4632  4699 I da3_app_fcswupdate: FcSwUpdateS2RHandler::powerStateListener() CarPowerManager setup successful
+09-05 08:11:59.460  4632  4699 I da3_app_fcswupdate: lastVersion: SW_Version_2026.17.0,03-09-2026 (31)
+09-05 08:11:59.460  4632  4699 I da3_app_fcswupdate: newEntry: SW_Version_2026.17.0 (20)
+09-05 08:11:59.460  4632  4699 E da3_app_fcswupdate: UpdateHistory::readUpdateHistory() SW_Version_2026.17.0 is the last version of updateHistory
+09-05 08:11:59.460  4632  4699 I da3_app_fcswupdate: FcSwUpdSrvBinderHelper::getFwCurrentVersion() START with fwName:=Aurix
+09-05 08:12:00.050  4632  4699 I da3_app_fcswupdate: getFwVersion SUCCESS with fwName:=Aurix Version:=25.0F2025.44
+09-05 08:12:34.379  4632  4710 I da3_app_fcswupdate: FcSwUpdateSrv::install() START with mountPoint: /data/usb/
+09-05 08:12:34.380  4632  4710 I da3_app_fcswupdate: FcSwUpdateSrv::install() Mountpoint already exists: /data/usb/!
+09-05 08:12:34.380  4632  4700 I da3_app_fcswupdate: FcSwUpdateSrv::vProcess(MsgSetUpdateSource) START
+09-05 08:12:34.380  4632  4700 D da3_app_fcswupdate: CampaignManager::verifyInstallPhaseReady() START
+09-05 08:12:34.380  4632  4700 D da3_app_fcswupdate: CampaignManager::getProgressFileDetails - START
+09-05 08:12:34.380  4632  4700 E da3_app_fcswupdate: getTempDir: could not create tmp-file
+09-05 08:12:34.380  4632  4700 E da3_app_fcswupdate: Matching File cmd - find /data/system/fcswupdate/persistent/ -maxdepth 1 -type f -name "fcswupd_running*.xml" >> /data/system/fcswupdate/tmp/swupd/tempFile.DEFAULT
+09-05 08:12:34.466  4632  4700 D da3_app_fcswupdate: CampaignManager::getProgressFileDetails - END
+09-05 08:12:34.466  4632  4700 I da3_app_fcswupdate: CampaignManager::verifyInstallPhaseReady() current enState=2, progressFile state:=
+09-05 08:12:34.526  4632  4700 I da3_app_fcswupdate: IntegrityCheck::setIntegrityCheckResult() set 1 to android property persist.vendor.bosch.swu.integrity_check SUCCESS
+09-05 08:12:34.526  4632  4700 I da3_app_fcswupdate: FcSwUpdateSrv::vProcess(MsgSetUpdateSource): Will start Install Process
+09-05 08:12:34.527  4632  4700 D da3_app_fcswupdate: PropDevMgr::vProcess(MsgUpdateSourceDetected): START
+09-05 08:12:34.527  4632  4700 D da3_app_fcswupdate: PropDevMgr::vProcess(MsgUpdateSourceDetected): available=0 mountPoint=/data/usb/
+09-05 08:12:34.527  4632  4700 D da3_app_fcswupdate: dev:
+09-05 08:12:34.527  4632  4700 D da3_app_fcswupdate: 	MountPoint:/data/usb/
+09-05 08:12:34.527  4632  4700 D da3_app_fcswupdate: 	isSdCard:0
+09-05 08:12:34.528  4632  4700 D da3_app_fcswupdate: PropDevMgr::hasMediumFormatSupported, supported format is empty allow all formats
+09-05 08:12:34.528  4632  4700 D da3_app_fcswupdate: PropDevMgr::bHasXmlAndIsofile:path:/data/usb/
+09-05 08:12:34.528  4632  4700 D da3_app_fcswupdate: PropDevMgr::bHasXmlAndIsofile: updateIsoPathAndName :/data/usb//
+09-05 08:12:34.530  4632  4700 D da3_app_fcswupdate: PropDevMgr::bHasXmlAndIsofile: try check file updateIsoPathAndName
+09-05 08:12:34.533  4632  4700 D da3_app_fcswupdate: PropDevMgr::bHasXmlAndIsofile: found both Bosch.cms and iso file in path:/data/usb/
+09-05 08:12:34.534  4632  4700 D da3_app_fcswupdate: Isofile is given more priority here
+09-05 08:12:34.534  4632  4700 D da3_app_fcswupdate: PropDevMgr::vProcess(MsgUpdateSourceDetected): _bHasCustomerUpdate=0
+09-05 08:12:34.534  4632  4700 D da3_app_fcswupdate: PropDevMgr::vProcess(MsgUpdateSourceDetected): END
+09-05 08:12:34.534  4632  4700 I da3_app_fcswupdate: app_fcswupdate triggerUsbUpdate() sent data back to client
+09-05 08:12:34.534  4632  4700 D da3_app_fcswupdate:  MsgNotifyDevManagerChanged()
+09-05 08:12:34.534  4632  4700 D da3_app_fcswupdate: FcSwUpdProject::vOnSystemDataChanged() START
+09-05 08:12:34.534  4632  4700 D da3_app_fcswupdate: FcSwUpdProject::vOnSystemDataChanged() relName=
+09-05 08:12:34.534  4632  4700 I da3_app_fcswupdate: BinderService::vProcess(MsgSrvSetUpdateState) start enState: 0
+09-05 08:12:34.538  4632  4700 D da3_app_fcswupdate: FcSwUpdProject::vOnSystemDataChanged() END
+09-05 08:12:34.538  4632  4700 I da3_app_fcswupdate: ConfiguratorOtaUpdate::vProcess(MsgNotifyDevManagerChanged) START
+09-05 08:12:34.538  4632  4700 I da3_app_fcswupdate: ConfiguratorOtaUpdate::findReleaseXml START
+09-05 08:12:34.538  4632  4700 I da3_app_fcswupdate: ConfiguratorOtaUpdate::findReleaseXml: numSources=1
+09-05 08:12:34.538  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseList START
+09-05 08:12:34.538  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseList: sourceInfo.path=/data/usb/
+09-05 08:12:34.538  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseList: check sourceInfo /data/usb///
+09-05 08:12:34.538  4632  4700 I da3_app_fcswupdate: FcSwUpdProject::addParsersToChain: CMS parser is needed
+09-05 08:12:34.538  4632  4700 I da3_app_fcswupdate: swu_openssl_wrapper::vInitOpenssl START
+09-05 08:12:34.594  4632  4700 D da3_app_fcswupdate: FcSwUpdProject::addParsersToChain: metaParser->configure()
+09-05 08:12:34.595  4632  4700 I da3_app_fcswupdate: Inside Security_UpdateInterface Constructor
+09-05 08:12:34.595  4632  4700 I da3_app_fcswupdate: getSWUCAcertificate
+09-05 08:12:34.595  4632  4700 I da3_app_fcswupdate: property value false
+09-05 08:12:34.595  4632  4700 I da3_app_fcswupdate: Reading Development root certificate 
+09-05 08:12:34.599  4632  4700 I da3_app_fcswupdate: Read certificate successful
+09-05 08:12:34.599  4632  4700 I da3_app_fcswupdate: CA Certificate BIO create successfully
+09-05 08:12:34.600  4632  4700 I da3_app_fcswupdate: parsing PEM certificate successfully
+09-05 08:12:34.601  4632  4700 I da3_app_fcswupdate: parsing PEM certificate successfully
+09-05 08:12:34.601  4632  4700 D da3_app_fcswupdate: CMSParser::parse /data/usb/
+09-05 08:12:34.602  4632  4700 D da3_app_fcswupdate: Parsing path '/data/usb/'
+09-05 08:12:34.602  4632  4700 I da3_app_fcswupdate: Parsing file /data/usb//Bosch.cms
+09-05 08:12:34.606  4632  4700 D da3_app_fcswupdate: Last authentic time: Thu Jan  1 05:30:00 1970
+09-05 08:12:34.612  4632  4700 D da3_app_fcswupdate: Updating last authentic time. Old: 01-01-1970 05:30:00
+09-05 08:12:34.612  4632  4700 D da3_app_fcswupdate:                               New: 19-09-2024 08:37:57
+09-05 08:12:34.612  4632  4700 I da3_app_fcswupdate: CMS validate got successfully
+09-05 08:12:34.613  4632  4700 D da3_app_fcswupdate: New authentic time: Thu Sep 19 08:37:57 2024
+09-05 08:12:34.613  4632  4700 E da3_app_fcswupdate: isUpdateEncrypted: No XML tag <licensefile> found
+09-05 08:12:34.613  4632  4700 D da3_app_fcswupdate: processAndCatenate : inFileName=        /data/usb//./bosch.xml outFileName=/data/system/fcswupdate/tmp/./bosch.xml doVerify=1
+09-05 08:12:34.613  4632  4700 D da3_app_fcswupdate: InputFileHandle:CTOR inputFileName=/data/usb//./bosch.xml
+09-05 08:12:34.613  4632  4700 D da3_app_fcswupdate: InputFileHandle:open() START
+09-05 08:12:34.613  4632  4700 D da3_app_fcswupdate: InputFileHandle:close() m_open=0
+09-05 08:12:34.613  4632  4700 D da3_app_fcswupdate: InputFileHandle:open() MODE_FILE
+09-05 08:12:34.619  4632  4700 D da3_app_fcswupdate: InputFileHandle:close() m_open=1
+09-05 08:12:34.620  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                     BXML_FILE, text=./bosch.xml
+09-05 08:12:34.620  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                BXML_FULL_PATH, text=/data/system/fcswupdate/tmp/./bosch.xml
+09-05 08:12:34.620  4632  4700 D da3_app_fcswupdate: ParserBosch::getReleaseList /data/usb/
+09-05 08:12:34.620  4632  4700 D da3_app_fcswupdate: Parsing path '/data/usb/'
+09-05 08:12:34.620  4632  4700 D da3_app_fcswupdate: BoschParser::readBoschXmlFromMedium: START
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterBaseNodes START
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                  MEDIUM_DRIVE, text=/data/usb/
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                     INFO_FILE, text=bosch.xml
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                   SOURCE_TYPE, text=0
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterMatch_FCIDS_0000 START
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterMatch_BOARDIDS_000000 START
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterMatch_CMVARIANTID_ START
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterExtraArgs START
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: readBoschXmlFromMedium:END
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: Parser getReleaseList: FOUND Release
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                  MEDIUM_DRIVE, text=/data/usb/
+09-05 08:12:34.621  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                   SOURCE_TYPE, text=0
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                 BXML_CHECKSUM, text=7b79fd9d19762f520f875d7b40b01587d2698c8a7e33337b2ecd9c15740f37c2
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: Added node BXML_CHECKSUM [7b79fd9d19762f520f875d7b40b01587d2698c8a7e33337b2ecd9c15740f37c2]
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                     BXML_FILE, text=bosch.xml
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                BXML_FULL_PATH, text=/data/system/fcswupdate/tmp/./bosch.xml
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                     BXML_FILE, text=bosch.xml
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                BXML_FULL_PATH, text=/data/system/fcswupdate/tmp/./bosch.xml
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterMandatoryNodes START
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterCheckFcids START
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: No FCIDS tag found in bosch.xml
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterCheckPrjID START
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: No PRJID tag found in bosch.xml
+09-05 08:12:34.622  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterFileExistence START
+09-05 08:12:34.622  4632  4700 E da3_app_fcswupdate: getTempDir: could not create tmp-file
+09-05 08:12:34.622  4632  4700 E da3_app_fcswupdate: realPath: call: realpath /data/usb//. >> /data/system/fcswupdate/tmp/swupd/tempFile.DEFAULT
+09-05 08:12:34.664  4632  4700 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:12:34.664  4632  4700 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:12:34.664  4632  4700 D da3_app_fcswupdate: getFileSize                /data/usb//./././/container.iso.bin:sizeof(off_t)=8 size=405504
+09-05 08:12:34.664  4632  4700 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:12:34.664  4632  4700 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:12:34.664  4632  4700 D da3_app_fcswupdate: getFileSize                /data/usb//./././/Updatepackage.zip:sizeof(off_t)=8 size=195554
+09-05 08:12:34.665  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterDnlSize START
+09-05 08:12:34.665  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                      DNL_SIZE, text=195554
+09-05 08:12:34.665  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                      DNL_SIZE, text=195554
+09-05 08:12:34.665  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                      DNL_SIZE, text=195554
+09-05 08:12:34.665  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                      DNL_SIZE, text=195554
+09-05 08:12:34.665  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterRename START
+09-05 08:12:34.665  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterDefault START
+09-05 08:12:34.665  4632  4700 D da3_app_fcswupdate: boschXmlPostProcess:  skipCheckSumOverall=1
+09-05 08:12:34.666  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                     HAS_DELTA, text=0
+09-05 08:12:34.666  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BXmlMoveElemFromParentToChild_UPDATE_TIME START
+09-05 08:12:34.666  4632  4700 D da3_app_fcswupdate: BXmlMoveElemFromParentToChild: START BXmlMoveElemFromParentToChild_UPDATE_TIME
+09-05 08:12:34.666  4632  4700 D da3_app_fcswupdate: Loaded successfully bosch.xml from /data/usb/
+09-05 08:12:34.666  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseList: found 1 releases errorCode=0
+09-05 08:12:34.666  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseList END
+09-05 08:12:34.666  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseInfo START
+09-05 08:12:34.666  4632  4700 D da3_app_fcswupdate: Found. Value=1
+09-05 08:12:34.666  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseInfo searching for force.dnl in path /data/usb//force.dnl
+09-05 08:12:34.667  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseInfo: check release with delta qpr1_a12_int_2026.18.0
+09-05 08:12:34.667  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseInfo: insert release qpr1_a12_int_2026.18.0
+09-05 08:12:34.667  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseInfo END
+09-05 08:12:34.667  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseXml START
+09-05 08:12:34.667  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseXml: checkRelease= qpr1_a12_int_2026.18.0
+09-05 08:12:34.667  4632  4700 E da3_app_fcswupdate: getTempDir: could not create tmp-file
+09-05 08:12:34.667  4632  4700 E da3_app_fcswupdate: realPath: call: realpath /data/usb/ >> /data/system/fcswupdate/tmp/swupd/tempFile.DEFAULT
+09-05 08:12:34.703  4632  4700 I da3_app_fcswupdate: PropDevMgr::mediaRealPath=/data/usb
+09-05 08:12:34.703  4632  4700 E da3_app_fcswupdate: getTempDir: could not create tmp-file
+09-05 08:12:34.703  4632  4700 E da3_app_fcswupdate: realPath: call: realpath /data/usb/ >> /data/system/fcswupdate/tmp/swupd/tempFile.DEFAULT
+09-05 08:12:34.749  4632  4700 I da3_app_fcswupdate: PropDevMgr::srcRealPath=/data/usb
+09-05 08:12:34.749  4632  4700 D da3_app_fcswupdate: BoschParser::setOverallSection
+09-05 08:12:34.749  4632  4700 D da3_app_fcswupdate: BoschParser::setOverallSection: got mediumPath=/data/usb/
+09-05 08:12:34.749  4632  4700 E da3_app_fcswupdate: getTempDir: could not create tmp-file
+09-05 08:12:34.749  4632  4700 E da3_app_fcswupdate: realPath: call: realpath /data/usb/ >> /data/system/fcswupdate/tmp/swupd/tempFile.DEFAULT
+09-05 08:12:34.804  4632  4700 I da3_app_fcswupdate: PropDevMgr::mediaRealPath=/data/usb
+09-05 08:12:34.804  4632  4700 E da3_app_fcswupdate: getTempDir: could not create tmp-file
+09-05 08:12:34.804  4632  4700 E da3_app_fcswupdate: realPath: call: realpath /data/usb/ >> /data/system/fcswupdate/tmp/swupd/tempFile.DEFAULT
+09-05 08:12:34.850  4632  4700 I da3_app_fcswupdate: PropDevMgr::srcRealPath=/data/usb
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: Found medium path /data/usb/
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: BoschParser::readBoschXmlFromMedium: START
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterBaseNodes START
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                  MEDIUM_DRIVE, text=/data/usb/
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                     INFO_FILE, text=bosch.xml
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                   SOURCE_TYPE, text=0
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterMatch_FCIDS_0000 START
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterMatch_BOARDIDS_000000 START
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterMatch_CMVARIANTID_ START
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BxmlFilterExtraArgs START
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: readBoschXmlFromMedium:END
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                  MEDIUM_DRIVE, text=/data/usb/
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                     INFO_FILE, text=bosch.xml
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                 BXML_CHECKSUM, text=7b79fd9d19762f520f875d7b40b01587d2698c8a7e33337b2ecd9c15740f37c2
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                     BXML_FILE, text=bosch.xml
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                BXML_FULL_PATH, text=/data/system/fcswupdate/tmp/./bosch.xml
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterMandatoryNodes START
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterCheckFcids START
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: No FCIDS tag found in bosch.xml
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterCheckPrjID START
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: No PRJID tag found in bosch.xml
+09-05 08:12:34.850  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterFileExistence START
+09-05 08:12:34.851  4632  4700 E da3_app_fcswupdate: getTempDir: could not create tmp-file
+09-05 08:12:34.851  4632  4700 E da3_app_fcswupdate: realPath: call: realpath /data/usb//. >> /data/system/fcswupdate/tmp/swupd/tempFile.DEFAULT
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: getFileSize                /data/usb//./././/container.iso.bin:sizeof(off_t)=8 size=405504
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: EnvironmentItemDescription<U32>::           readFromEnvironment success=0 key=SW_UPDATE_ENGINEERING_MODE val=0
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: getFileSize                /data/usb//./././/Updatepackage.zip:sizeof(off_t)=8 size=195554
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterDnlSize START
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                      DNL_SIZE, text=195554
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                      DNL_SIZE, text=195554
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                      DNL_SIZE, text=195554
+09-05 08:12:34.905  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                      DNL_SIZE, text=195554
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterRename START
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:ReleaseFilterDefault START
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: boschXmlPostProcess:  skipCheckSumOverall=1
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: addTextChild:childName=                     HAS_DELTA, text=0
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: ReleaseFilterChain():apply() filter:BXmlMoveElemFromParentToChild_UPDATE_TIME START
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: BXmlMoveElemFromParentToChild: START BXmlMoveElemFromParentToChild_UPDATE_TIME
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: BoschParser::getReleaseXml: m_releaseDoc
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseXml: best release= qpr1_a12_int_2026.18.0: valid
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::getReleaseXml END
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::checkVersion() START
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: updateBuildLabel from bosch.xml: [qpr1_a12_int_2026.18.0]
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: ConfiguratorOtaUpdate::checkVariant() START
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: updateBuildVariant from bosch.xml: [da3_in]
+09-05 08:12:34.906  4632  4700 D da3_app_fcswupdate: buildLabelRegexMatch is [qpr1_a12_int_2026.18.0]
+09-05 08:12:34.906  4632  4700 E da3_app_fcswupdate: System donot permit downgrade [cur=2026190][post=2026180]
+09-05 08:12:34.906  4632  4700 E da3_app_fcswupdate: *****************************************************************
+09-05 08:12:34.906  4632  4700 E da3_app_fcswupdate: Error Update-Medium: ERROR_IMAGE_INCOMPATIBLE_DOWNGRADE 39 FCID:0000
+09-05 08:12:34.906  4632  4700 E da3_app_fcswupdate: Error Update-Medium: ERROR_IMAGE_INCOMPATIBLE_DOWNGRADE 39 FCID:0000
+09-05 08:12:34.906  4632  4700 E da3_app_fcswupdate: *****************************************************************
+09-05 08:12:34.907  4632  4700 I da3_app_fcswupdate: BinderService::vProcess(MsgSrvSetUpdateErrors) start:
+09-05 08:12:34.951  4632  4700 I da3_app_fcswupdate: IntegrityCheck::setIntegrityCheckResult() set 0 to android property persist.vendor.bosch.swu.integrity_check SUCCESS
+09-05 08:12:34.951  4632  4700 I da3_app_fcswupdate: Binder error in toBinderEnErrorId 39
+09-05 08:12:34.951  4632  4700 D da3_app_fcswupdate: Binder error in toBinderEnErrorId 39
+09-05 08:12:34.951  4632  4700 D da3_app_fcswupdate: setUpdateErorrs::Swu update activation phase is =0
+09-05 08:12:34.952  4632  4700 E da3_app_fcswupdate: Move Adb log file to FOTA after errorCode:=39
+09-05 08:12:34.953  4632  4700 D da3_app_fcswupdate: RobustFile::remove (/data/system/fcswupdate/persistent/SWU_log.txt) START
+09-05 08:12:34.999  4632  4700 I da3_app_fcswupdate: ConfiguratorOtaUpdate::vProcess(MsgNotifyDevManagerChanged) END

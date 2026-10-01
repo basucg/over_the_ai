@@ -1,0 +1,12 @@
+
+======================================================================
+         SLM ROOT CAUSE DIAGNOSIS (WITH PROCESS LOGS)
+======================================================================
+Package Type: UNKNOWN
+Root Cause: Insufficient evidence to determine package type or failure mechanism. Logs are empty.
+Evidence: Process logs are empty. Ollama server logs not found at /app/ollama_logs.
+Failure Category: UNKNOWN
+======================================================================
+Report File Created on Linux Server: /tmp/ai-swupdate-reports/swupdate-report-1788679577.md
+======================================================================
+
