@@ -1,79 +1,54 @@
-# AI Service Client & SLM Diagnostic Server
+# AI Service Client and SWUpdate Diagnostic Server
 
-An end-to-end system for streaming automotive software update notifications from an **Android Target (`FcSwUpdateSrv`)** to a **Linux Docker Server** running a **Small Language Model (SLM)** for automated root cause diagnosis upon update failures.
+This module pairs an Android SWUpdate/FOTA client with Python diagnostic server variants. The Android client receives Binder callbacks, sends update information over TCP, and responds to server requests for platform details, log artifacts, and OTA logs. A selected server variant receives those messages and runs the diagnostic/model workflow.
 
-```
-┌──────────────────────────┐             ┌──────────────────────────────────┐
-│      Android Target      │             │      Linux Host / Docker         │
-│                          │             │                                  │
-│  ┌────────────────────┐  │             │  ┌────────────────────────────┐  │
-│  │   FcSwUpdateSrv    │  │             │  │ AI Diagnostic Server (Py)  │  │
-│  └─────────┬──────────┘  │ Bidirection │  │ (Port 9000, Event Tracker) │  │
-│            │ (Binder)    │ TCP Socket  │  └──────────────┬─────────────┘  │
-│            ▼             │◀───────────▶│                 │ Prompt         │
-│  ┌────────────────────┐  │ (JSON line) │                 ▼                │
-│  │ ai_service_client  │  │             │  ┌────────────────────────────┐  │
-│  └────────────────────┘  │             │  │   SLM Server (Ollama)      │  │
-│                          │             │  │   (gemma3:12b)               │  │
-│                          │             │  └────────────────────────────┘  │
-└──────────────────────────┘             └──────────────────────────────────┘
-```
+## Documentation
 
----
+- [Android client guide](README_ANDROID.md): Android build, init startup, endpoint configuration, and Binder/TCP responsibilities.
+- [Package-generator server guide](server/ai_server_packageGenerator/README.md): diagnostic server plus the package-generation TCP service.
+- [Mock-device server guide](server/ai_server_DeviceSimulationUsingMock/README.md): server variant with a mock Android event client and sample archive.
 
-## 1. Android Target (`ai_service_client`)
+## End-to-end flow
 
-### Features & Workflow
-- **Binder IPC Listener**: Implements `swu::FcSwUpdateSrv::BnUpdateCallback` to receive `onUpdateState`, `onUpdateProgress`, `onUpdateError`, `onCancelUpdResult`, and `onCompleteUpdResult`.
-- **Error Notification**: On update failure (`onUpdateError`), immediately sends an error notification to the AI server.
-- **Server-Driven Diagnostic APIs**:
-  - **API 1 (`getSystemInformation` / `sendSystemInformation`)**: When the server requests system details (`request_system_details`), the client gathers `product_class` (e.g. `IVI`), `primary_os` (e.g. `Android`), and `secondary_os` (e.g. `["Linux"]`) and returns them in a structured JSON response.
-  - **API 2 (`getRequiredFiles`)**: When the server requests specific log files based on the platform details (`request_artifacts` with tags such as `update_engine_logs`, `logcat_logs`, `update_persistent_logs`, `downloadpipe`), the client runs `logcat -d -s "<TAG>"` for each requested tag, packages them into a `.tar.gz` archive, base64-encodes the archive, and transmits it back to the AI server.
-- **Bidirectional TCP Communication**: `TcpNotificationSender` manages background send queues and incoming server message dispatching.
-- **Configurable Endpoint**:
-  - Android system properties: `vendor.bosch.ai.server.ip` and `vendor.bosch.ai.server.port`.
-  - CLI overrides: `-ip <host> -p <port>`.
-- **Init Integration**: Runs automatically on boot or when SWUpdate daemon starts via `ai_service_client.rc`.
+1. `ai_service_client` connects to `FcSwUpdateSrv` and registers update callbacks. It also connects to the FOTA HMI Binder service for OTA HMI events and log requests.
+2. `TcpNotificationSender` exchanges newline-delimited JSON with the diagnostic server on TCP port `9000`.
+3. The server tracks update events, accepts diagnostic archives, and runs root-cause analysis, detailed analysis, and recovery planning using an Ollama-compatible model endpoint.
+4. Both Compose variants start a package-generation service on TCP port `9001`; the diagnostic agent can request a simulated package result.
 
-### Building
-```bash
-m ai_service_client
+## Choose and run a server variant
+
+Run one Compose project at a time. The variants reuse Docker container names and host ports.
+
+For the package-generator variant:
+
+```sh
+cd vendor/bosch/services/ai_service_client/server/ai_server_packageGenerator
+docker compose up --build
 ```
 
-### Running on Target
-```bash
-# Configure server IP via system property
-setprop vendor.bosch.ai.server.ip 192.168.1.100
-setprop vendor.bosch.ai.server.port 9000
-ai_service_client
+For the mock-device variant:
 
-# Or pass directly via CLI
-ai_service_client -ip 192.168.1.100 -p 9000
-ai_service_client -ip 127.0.0.1 -p 9000
+```sh
+cd vendor/bosch/services/ai_service_client/server/ai_server_DeviceSimulationUsingMock
+docker compose up --build
 ```
 
----
+Both Compose projects expose the diagnostic TCP listener on `9000`, Ollama on `11434`, and the package-generator endpoint on `9001`. The model initialization service pulls `gemma3:4b` into a persistent Docker volume.
 
-## Directory Structure
+To simulate client traffic with the mock variant, run this from a second terminal in its directory:
+
+```sh
+python3 mock_client_test.py --host 127.0.0.1 --port 9000
 ```
-ai_service_client/
-├── docs/
-│   └── system_flow.puml          # PlantUML sequence diagram for complete flow
-├── Android.bp                    # Soong build definition
-├── ai_service_client.rc          # Android init script
-├── include/
-│   ├── SwuNotificationClient.hpp # Manager for FcSwUpdateSrv Binder + AI Diagnostic APIs
-│   ├── SwuUpdateCallback.hpp     # BnUpdateCallback + JSON formatting
-│   └── TcpNotificationSender.hpp # Thread-safe bidirectional async TCP socket client
-├── src/
-│   ├── main.cpp                  # Daemon entry point with property/CLI parsing
-│   ├── SwuNotificationClient.cpp
-│   ├── SwuUpdateCallback.cpp
-│   └── TcpNotificationSender.cpp
-└── server/                       # Linux Docker Server & SLM stack
-    ├── ai_server.py              # Async Python TCP server + Ollama prompt handler
-    ├── Dockerfile                # AI Server container build
-    ├── docker-compose.yml        # Multi-container stack (AI Server + Ollama)
-    ├── mock_client_test.py       # Standalone test generator
-    └── requirements.txt
-```
+
+The mock sends representative update-state/progress messages and the bundled `version_downgrade.zip` archive. It does not interact with a physical target or perform an update.
+
+## Configuration notes
+
+The Android init service currently targets `127.0.0.1:9000`; change the `-ip` argument in `ai_service_client.rc` to the server's reachable address when the server runs elsewhere.
+
+Both Python `UpdateAgent.py` variants read `AIMODEL_API_URL` and `AIMODEL_MODEL` for their model connection, while the checked-in Compose files set `SLM_API_URL` and `SLM_MODEL`. Configure `AIMODEL_API_URL` and `AIMODEL_MODEL` on the diagnostic service; inside the Compose network the Ollama URL is `http://ollama:11434/api/generate`. The code's `localhost` default would point back to the AI server container.
+
+The package-generation endpoint currently simulates processing and returns a package filename; it does not create an update archive. Treat its response as a test result, not a flashable artifact.
+
+For Android target build and startup details, see [README_ANDROID.md](README_ANDROID.md). For each server's files and protocol, see the variant guides above.
